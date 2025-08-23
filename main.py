@@ -1,4 +1,7 @@
 import os
+import logging
+import logging.handlers
+
 from datetime import datetime  
 
 from langchain_core.messages import HumanMessage, AIMessage
@@ -9,8 +12,8 @@ from langchain_core.output_parsers import JsonOutputParser
 from langchain.memory import ChatMessageHistory
 from langchain_core.rate_limiters import InMemoryRateLimiter
 
-import logging
-import logging.handlers
+from agents.qna_agent import get_qna_agent
+
 
 # --- 로거 설정 ---
 # 1. 로거 생성
@@ -50,11 +53,13 @@ rate_limiter = InMemoryRateLimiter(
     max_bucket_size=10,  
 )
 
-llm_orchestration = ChatGoogleGenerativeAI(
+llm_gemini = ChatGoogleGenerativeAI(
     model="gemini-2.5-flash-lite",
     temperature=0,
     rate_limiter=rate_limiter
 )
+
+
 
 # 인메모리 세션 스토어: {세션 ID: ChatMessageHistory 객체} 형태로 저장됩니다.
 session_histories = {}
@@ -137,7 +142,7 @@ guardrail_prompt = PromptTemplate.from_template(guardrail_prompt_template)
 
 logger.info(guardrail_prompt)
 
-guardrail_chain = guardrail_prompt | llm_orchestration | StrOutputParser()
+guardrail_chain = guardrail_prompt | llm_gemini | StrOutputParser()
 
 
 # --- 의도분류 체인 정의 ---
@@ -170,7 +175,11 @@ intent_classification_prompt_json = ChatPromptTemplate.from_messages([
     ),
     ("user", "{input}"),
 ])
-orchestration_chain = intent_classification_prompt_json | llm_orchestration | JsonOutputParser()
+orchestration_chain = intent_classification_prompt_json | llm_gemini | JsonOutputParser()
+
+
+# --- QnA Agent 체인 정의 ---
+qna_chain = get_qna_agent()
 
 
 
@@ -221,11 +230,27 @@ def run_orchestrator_with_guardrail(user_id: str, session_id: str, user_input: s
 
         # tobe: call agent
         if intent == 'QNA':
-            logger.info("✅ Routing to QnA Agent... (미연결)")
-            response = "[QnA 에이전트의 답변이 여기에 표시됩니다]"
+            logger.info("✅ Routing to QnA Agent...")
+            qna_input = {
+                "question": user_input,
+                "desc": intent_json.get("desc", ""),
+                "sentiment": intent_json.get("sentiment", "NEUTRAL")
+            }
+
+            # 실제 QnA 체인을 호출합니다.
+            #response = qna_chain.invoke(qna_input)
+            # 스트리밍 방식으로 답변 생성
+            print("🤖 AI: ", end="", flush=True)
+            response = ""
+            for chunk in qna_chain.stream(qna_input):
+                print(chunk, end="", flush=True)
+                response += chunk
+            print()
+
         elif intent == 'AICC':
             logger.info("✅ Routing to AICC Agent... (미연결)")
             response = "[AICC 에이전트의 답변이 여기에 표시됩니다]"
+
         else:
             response = "무슨 말씀이신지 잘 모르겠어요. 좀 더 자세히 설명해 주시겠어요?"
         print(f"[{session_id}] 🤖 AI response : {response}")
