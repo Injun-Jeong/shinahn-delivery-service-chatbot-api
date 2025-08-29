@@ -1287,3 +1287,33 @@
 2025-08-29 07:37:04,426 - my_service_logger - INFO - 가드레일 체인이 생성되었습니다.
 2025-08-29 07:37:04,427 - my_service_logger - INFO - 의도분류 체인이 생성되었습니다.
 2025-08-29 07:37:04,477 - my_service_logger - INFO - QnA 에이전트 체인이 생성되었습니다.
+2025-08-29 07:48:59,836 - my_service_logger - INFO - 가드레일 체인이 생성되었습니다.
+2025-08-29 07:48:59,837 - my_service_logger - INFO - 의도분류 체인이 생성되었습니다.
+2025-08-29 07:48:59,888 - my_service_logger - INFO - QnA 에이전트 체인이 생성되었습니다.
+2025-08-29 07:49:00,715 - my_service_logger - INFO - 🤖 Master Router Agent가 초기화되었습니다.
+2025-08-29 07:49:13,437 - my_service_logger - INFO - [] 👤 User: 안녕하쇼!
+2025-08-29 07:49:13,438 - my_service_logger - INFO - [] 새로운 세션을 시작합니다.
+2025-08-29 07:49:16,028 - my_service_logger - INFO - [] 🛡️ Guardrail Check: FAIL
+2025-08-29 07:49:16,028 - my_service_logger - INFO - [] 💬 Final result: {'user_id': '', 'session_id': '', 'response': '죄송합니다. 저는 땡겨요 서비스 관련 질문에만 답변해 드릴 수 있어요. 무엇을 도와드릴까요?', 'sentiment': 'UNKNOWN', 'guardrail_result': 'FAIL', 'intent': 'UNKNOWN'}
+2025-08-29 07:49:25,036 - my_service_logger - INFO - [] 👤 User: 민생지원금 사용 가능하냐?
+2025-08-29 07:49:25,435 - my_service_logger - INFO - [] 🛡️ Guardrail Check: PASS
+2025-08-29 07:49:26,340 - my_service_logger - INFO - [] 🤖 Intent: {'intent': 'QNA', 'desc': '민생지원금 사용 가능 여부에 대한 질문', 'sentiment': 'NEUTRAL'}
+2025-08-29 07:49:26,340 - my_service_logger - INFO - [] ✅ Routing to QnA Agent...
+2025-08-29 07:49:39,088 - my_service_logger - INFO - [] 🤖 AI response: 민생지원금은 땡겨요에서 사용할 수 없습니다. 민생회복 소비쿠폰만 사용 가능하며, 이는 지역화폐로 발행된 소비쿠폰에 한정됩니다. 사용 가능한 매장과 방법은 해당 지역화폐 운영사의 웹사이트에서 확인하시기 바랍니다.
+2025-08-29 07:49:39,089 - my_service_logger - INFO - [] 💬 Final result: {'user_id': '', 'session_id': '', 'response': '민생지원금은 땡겨요에서 사용할 수 없습니다. 민생회복 소비쿠폰만 사용 가능하며, 이는 지역화폐로 발행된 소비쿠폰에 한정됩니다. 사용 가능한 매장과 방법은 해당 지역화폐 운영사의 웹사이트에서 확인하시기 바랍니다.', 'sentiment': 'NEUTRAL', 'guardrail_result': 'PASS', 'intent': 'QNA'}
+2025-08-29 07:49:50,298 - my_service_logger - INFO - [] 👤 User: 민생회복 소비쿠폰 사용 가능한걸로 알고 있는데???
+2025-08-29 07:49:50,689 - my_service_logger - INFO - [] 🛡️ Guardrail Check: PASS
+2025-08-29 07:49:51,555 - my_service_logger - INFO - [] 🤖 Intent: {'intent': 'QNA', 'desc': '민생회복 소비쿠폰 사용 가능 여부에 대한 질문', 'sentiment': 'NEUTRAL'}
+2025-08-29 07:49:51,555 - my_service_logger - INFO - [] ✅ Routing to QnA Agent...
+2025-08-29 07:49:55,177 - my_service_logger - INFO - [] 🤖 AI response: 안녕하세요, 땡겨요입니다. 민생회복 소비쿠폰은 특정 지자체에서 발행된 지역화폐로, 땡겨요의 해당 매장에서만 사용 가능합니다. 사용을 원하시는 경우, 반드시 해당 매장이 민생회복 소비쿠폰을 받는 곳인지 확인하시고, 땡겨요 앱 내에 해당 지역화폐 배너가 있는 가게에서 주문 시 '지역사랑상품권' 탭을 통해 결제를 진행해야 합니다. 기타 자세한 사항은 지역화폐 운영사 홈페이지를 참고해 주시기 바랍니다. 감사합니다.
+2025-08-29 07:49:55,177 - my_service_logger - INFO - [] 💬 Final result: {'user_id': '', 'session_id': '', 'response': "안녕하세요, 땡겨요입니다. 민생회복 소비쿠폰은 특정 지자체에서 발행된 지역화폐로, 땡겨요의 해당 매장에서만 사용 가능합니다. 사용을 원하시는 경우, 반드시 해당 매장이 민생회복 소비쿠폰을 받는 곳인지 확인하시고, 땡겨요 앱 내에 해당 지역화폐 배너가 있는 가게에서 주문 시 '지역사랑상품권' 탭을 통해 결제를 진행해야 합니다. 기타 자세한 사항은 지역화폐 운영사 홈페이지를 참고해 주시기 바랍니다. 감사합니다.", 'sentiment': 'NEUTRAL', 'guardrail_result': 'PASS', 'intent': 'QNA'}
+2025-08-29 07:50:03,028 - my_service_logger - INFO - [] 👤 User: 민생지원금이 곧 민생소비쿠폰이잖아!
+2025-08-29 07:50:03,399 - my_service_logger - INFO - [] 🛡️ Guardrail Check: PASS
+2025-08-29 07:50:04,315 - my_service_logger - INFO - [] 🤖 Intent: {'intent': 'QNA', 'desc': '민생지원금이 민생소비쿠폰인지에 대한 질문', 'sentiment': 'NEUTRAL'}
+2025-08-29 07:50:04,315 - my_service_logger - INFO - [] ✅ Routing to QnA Agent...
+2025-08-29 07:50:06,752 - my_service_logger - INFO - [] 🤖 AI response: 민생지원금과 민생소비쿠폰은 서로 다른 개념입니다. 민생소비쿠폰은 지역화폐로 발행된 소비쿠폰 형태로, 땡겨요에서 특정 매장에서만 사용 가능합니다. 민생지원금으로 받은 카드 결제는 사용이 불가능하며, 민생소비쿠폰은 지역화폐 앱을 통해 결제해야 합니다. 더 궁금한 점이 있으면 언제든지 문의해 주세요!
+2025-08-29 07:50:06,753 - my_service_logger - INFO - [] 💬 Final result: {'user_id': '', 'session_id': '', 'response': '민생지원금과 민생소비쿠폰은 서로 다른 개념입니다. 민생소비쿠폰은 지역화폐로 발행된 소비쿠폰 형태로, 땡겨요에서 특정 매장에서만 사용 가능합니다. 민생지원금으로 받은 카드 결제는 사용이 불가능하며, 민생소비쿠폰은 지역화폐 앱을 통해 결제해야 합니다. 더 궁금한 점이 있으면 언제든지 문의해 주세요!', 'sentiment': 'NEUTRAL', 'guardrail_result': 'PASS', 'intent': 'QNA'}
+2025-08-29 07:51:23,724 - my_service_logger - INFO - 가드레일 체인이 생성되었습니다.
+2025-08-29 07:51:23,725 - my_service_logger - INFO - 의도분류 체인이 생성되었습니다.
+2025-08-29 07:51:23,764 - my_service_logger - INFO - QnA 에이전트 체인이 생성되었습니다.
+2025-08-29 07:51:24,479 - my_service_logger - INFO - 🤖 Master Router Agent가 초기화되었습니다.

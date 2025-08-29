@@ -12,6 +12,8 @@ class Body(BaseModel):
 
 app = FastAPI()
 
+router = MasterRouter()
+
 # --- 기존 GET 엔드포인트 ---
 @app.get("/")
 def read_root():
@@ -26,8 +28,6 @@ def serving(body: Body): # 👈 파라미터로 Pydantic 모델을 받습니다.
     """
     #logger.info("🚀 LLM Application starting...")
     # 마스터 라우터 인스턴스 생성
-    
-    router = MasterRouter()
     result = router.handle_request(body.user_id, body.session_id, body.human)
 
     return result
