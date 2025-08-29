@@ -53,7 +53,7 @@ def pick_k(query: str, k_def: int, k_max: int) -> int:
 def filter_docs_by_score_and_budget(docs_with_scores: List, k: int, fetch_k: int) -> List[Document]:
     """점수 임계치와 문자 예산으로 문서 필터링"""
     # 점수 기반 필터링 (FAISS는 낮은 점수가 더 유사함)
-    kept = [doc for doc, score in docs_with_scores if score <= (1 - SCORE_THRESHOLD)]
+    kept = [doc for doc, score in docs_with_scores if score >= (1 - SCORE_THRESHOLD)]
     
     # 상위 k개 선택
     top = kept[:k]

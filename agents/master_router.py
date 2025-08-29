@@ -41,6 +41,7 @@ class MasterRouter:
         if "FAIL" in guardrail_result:
             response = "죄송합니다. 저는 땡겨요 서비스 관련 질문에만 답변해 드릴 수 있어요. 무엇을 도와드릴까요?"
             intent = "UNKNOWN"
+            sentiment = "UNKNOWN"
             history.add_message(user_message)
             ai_message = AIMessage(content=response, additional_kwargs={"timestamp": datetime.now().strftime('%Y-%m-%d %H:%M:%S')})
             history.add_message(ai_message)
@@ -54,6 +55,7 @@ class MasterRouter:
                 "input": user_input,
             })
             intent = intent_json.get("intent", "UNKNOWN")
+            sentiment = intent_json.get("sentiment", "UNKNOWN")
             logger.info(f"[{session_id}] 🤖 Intent: {intent_json}")
 
             if intent == 'QNA':
@@ -79,6 +81,7 @@ class MasterRouter:
             elif intent == 'AICC':
                 logger.info(f"[{session_id}] ✅ Routing to AICC Agent... (Not connected)")
                 response = "단순 Q&A가 아니군요. 새로운 Agent 개발이 필요합니다!"
+            
             else:
                 response = "무슨 말씀이신지 잘 모르겠어요. 좀 더 자세히 설명해 주시겠어요?"
 
@@ -87,7 +90,7 @@ class MasterRouter:
             final_ai_message = AIMessage(content=response, additional_kwargs={"timestamp": datetime.now().strftime('%Y-%m-%d %H:%M:%S')})
             history.add_message(final_ai_message)
 
-        result = {"user_id": user_id, "session_id": session_id, "response": response, "guardrail_result": guardrail_result, "intent": intent}
+        result = {"user_id": user_id, "session_id": session_id, "response": response, "sentiment": sentiment,"guardrail_result": guardrail_result, "intent": intent}
         logger.info(f"[{session_id}] 💬 Final result: {result}")
         return result
 
