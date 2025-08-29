@@ -345,3 +345,513 @@
 2025-08-28 23:42:18,196 - my_service_logger - INFO - [cli_user_20250828234105] 세션을 종료하고 대화 기록을 삭제합니다.
 2025-08-28 23:42:18,196 - my_service_logger - INFO - [cli_user_20250828234105] 프로그램을 종료합니다.
 2025-08-28 23:42:18,196 - my_service_logger - INFO - 👋 LLM Application finished.
+2025-08-29 04:04:53,727 - my_service_logger - INFO - 가드레일 체인이 생성되었습니다.
+2025-08-29 04:04:53,727 - my_service_logger - INFO - 의도분류 체인이 생성되었습니다.
+2025-08-29 04:06:37,433 - my_service_logger - INFO - 가드레일 체인이 생성되었습니다.
+2025-08-29 04:06:37,434 - my_service_logger - INFO - 의도분류 체인이 생성되었습니다.
+2025-08-29 04:06:56,002 - my_service_logger - INFO - 가드레일 체인이 생성되었습니다.
+2025-08-29 04:06:56,003 - my_service_logger - INFO - 의도분류 체인이 생성되었습니다.
+2025-08-29 04:06:56,048 - my_service_logger - INFO - QnA 에이전트 체인이 생성되었습니다.
+2025-08-29 04:09:54,086 - my_service_logger - INFO - 가드레일 체인이 생성되었습니다.
+2025-08-29 04:09:54,087 - my_service_logger - INFO - 의도분류 체인이 생성되었습니다.
+2025-08-29 04:09:54,142 - my_service_logger - INFO - QnA 에이전트 체인이 생성되었습니다.
+2025-08-29 04:09:55,926 - my_service_logger - INFO - 가드레일 체인이 생성되었습니다.
+2025-08-29 04:09:55,927 - my_service_logger - INFO - 의도분류 체인이 생성되었습니다.
+2025-08-29 04:09:55,966 - my_service_logger - INFO - QnA 에이전트 체인이 생성되었습니다.
+2025-08-29 04:10:16,080 - my_service_logger - INFO - 가드레일 체인이 생성되었습니다.
+2025-08-29 04:10:16,081 - my_service_logger - INFO - 의도분류 체인이 생성되었습니다.
+2025-08-29 04:10:16,125 - my_service_logger - INFO - QnA 에이전트 체인이 생성되었습니다.
+2025-08-29 04:10:49,643 - my_service_logger - INFO - 가드레일 체인이 생성되었습니다.
+2025-08-29 04:10:49,644 - my_service_logger - INFO - 의도분류 체인이 생성되었습니다.
+2025-08-29 04:10:49,699 - my_service_logger - INFO - QnA 에이전트 체인이 생성되었습니다.
+2025-08-29 04:11:16,042 - my_service_logger - INFO - 🤖 Master Router Agent가 초기화되었습니다.
+2025-08-29 04:11:16,042 - my_service_logger - INFO - [injun123] 👤 User: 땡겨요가 무엇인가요?
+2025-08-29 04:11:16,042 - my_service_logger - INFO - [injun123] 새로운 세션을 시작합니다.
+2025-08-29 04:11:19,346 - my_service_logger - INFO - [injun123] 🛡️ Guardrail Check: PASS
+2025-08-29 04:11:20,646 - my_service_logger - INFO - [injun123] 🤖 Intent: {'intent': 'QNA', 'desc': '땡겨요 서비스에 대한 기본적인 정보 문의', 'sentiment': 'NEUTRAL'}
+2025-08-29 04:11:20,646 - my_service_logger - INFO - [injun123] ✅ Routing to QnA Agent...
+2025-08-29 04:11:25,470 - my_service_logger - INFO - [injun123] 🤖 AI response: 안녕하세요, 땡겨요 서비스에 대해 문의주셨군요.
+
+땡겨요는 신한은행에서 '고객과 가맹점 모두에게 이로운 상생 금융'을 목표로 출시한 배달 애플리케이션입니다. 기존 배달앱의 높은 중개수수료와 광고비 부담을 낮추어 소상공인(가맹점주)의 실질적인 소득 증대를 돕고, 소비자에게는 다양한 할인 혜택과 금융 상품 연계 이점을 제공하는 것이 특징입니다.
+
+더 궁금하신 점이 있으시면 언제든지 말씀해주세요.
+2025-08-29 04:11:25,470 - my_service_logger - INFO - [injun123] 💬 Final result: {'user_id': '203853', 'session_id': 'injun123', 'response': "안녕하세요, 땡겨요 서비스에 대해 문의주셨군요.\n\n땡겨요는 신한은행에서 '고객과 가맹점 모두에게 이로운 상생 금융'을 목표로 출시한 배달 애플리케이션입니다. 기존 배달앱의 높은 중개수수료와 광고비 부담을 낮추어 소상공인(가맹점주)의 실질적인 소득 증대를 돕고, 소비자에게는 다양한 할인 혜택과 금융 상품 연계 이점을 제공하는 것이 특징입니다.\n\n더 궁금하신 점이 있으시면 언제든지 말씀해주세요.", 'guardrail_result': 'PASS', 'intent': 'QNA'}
+2025-08-29 04:16:55,278 - my_service_logger - INFO - 가드레일 체인이 생성되었습니다.
+2025-08-29 04:16:55,279 - my_service_logger - INFO - 의도분류 체인이 생성되었습니다.
+2025-08-29 04:16:55,333 - my_service_logger - INFO - QnA 에이전트 체인이 생성되었습니다.
+2025-08-29 04:17:07,171 - my_service_logger - INFO - 🤖 Master Router Agent가 초기화되었습니다.
+2025-08-29 04:17:07,171 - my_service_logger - INFO - [injun123] 👤 User: 땡겨요가 무엇인가요????
+2025-08-29 04:17:07,172 - my_service_logger - INFO - [injun123] 새로운 세션을 시작합니다.
+2025-08-29 04:17:09,647 - my_service_logger - INFO - [injun123] 🛡️ Guardrail Check: PASS
+2025-08-29 04:17:11,733 - my_service_logger - INFO - [injun123] 🤖 Intent: {'intent': 'QNA', 'desc': '땡겨요 서비스에 대한 일반적인 질문입니다.', 'sentiment': 'NEUTRAL'}
+2025-08-29 04:17:11,733 - my_service_logger - INFO - [injun123] ✅ Routing to QnA Agent...
+2025-08-29 04:17:15,692 - my_service_logger - INFO - [injun123] 🤖 AI response: 안녕하세요! 땡겨요 서비스에 대해 궁금하신 점이 있으시군요.
+
+땡겨요는 신한은행에서 '고객과 가맹점 모두에게 이로운 상생 금융'을 목표로 출시한 배달 애플리케이션입니다. 기존 배달앱의 높은 중개수수료와 광고비 부담을 낮추어 소상공인(가맹점주)의 실질적인 소득 증대를 돕고, 소비자에게는 다양한 할인 혜택과 금융 상품 연계 이점을 제공하는 것이 특징입니다.
+
+더 궁금하신 점이 있으시면 언제든지 문의해주세요.
+2025-08-29 04:17:15,693 - my_service_logger - INFO - [injun123] 💬 Final result: {'user_id': '203853', 'session_id': 'injun123', 'response': "안녕하세요! 땡겨요 서비스에 대해 궁금하신 점이 있으시군요.\n\n땡겨요는 신한은행에서 '고객과 가맹점 모두에게 이로운 상생 금융'을 목표로 출시한 배달 애플리케이션입니다. 기존 배달앱의 높은 중개수수료와 광고비 부담을 낮추어 소상공인(가맹점주)의 실질적인 소득 증대를 돕고, 소비자에게는 다양한 할인 혜택과 금융 상품 연계 이점을 제공하는 것이 특징입니다.\n\n더 궁금하신 점이 있으시면 언제든지 문의해주세요.", 'guardrail_result': 'PASS', 'intent': 'QNA'}
+2025-08-29 04:31:33,898 - my_service_logger - INFO - 가드레일 체인이 생성되었습니다.
+2025-08-29 04:31:33,898 - my_service_logger - INFO - 의도분류 체인이 생성되었습니다.
+2025-08-29 04:31:33,936 - my_service_logger - INFO - QnA 에이전트 체인이 생성되었습니다.
+2025-08-29 04:43:39,512 - my_service_logger - INFO - 🤖 Master Router Agent가 초기화되었습니다.
+2025-08-29 04:43:39,512 - my_service_logger - INFO - [injun123] 👤 User: 민생 소비 회복 쿠폰 사용 가능한가요?
+2025-08-29 04:43:39,512 - my_service_logger - INFO - [injun123] 새로운 세션을 시작합니다.
+2025-08-29 04:43:41,961 - my_service_logger - INFO - [injun123] 🛡️ Guardrail Check: PASS
+2025-08-29 04:43:44,016 - my_service_logger - INFO - [injun123] 🤖 Intent: {'intent': 'QNA', 'desc': '민생 소비 회복 쿠폰 사용 가능 여부 문의', 'sentiment': 'NEUTRAL'}
+2025-08-29 04:43:44,016 - my_service_logger - INFO - [injun123] ✅ Routing to QnA Agent...
+2025-08-29 04:43:48,690 - my_service_logger - INFO - [injun123] 🤖 AI response: 안녕하세요, 땡겨요 서비스 상담원입니다.
+
+민생 소비 회복 쿠폰 사용 가능 여부에 대해 문의주셨습니다.
+
+현재 제가 가지고 있는 정보에는 민생 소비 회복 쿠폰에 대한 내용이 없습니다. 번거로우시겠지만, 해당 쿠폰 사용 가능 여부에 대해서는 땡겨요 고객센터로 문의해 주시면 감사하겠습니다.
+2025-08-29 04:43:48,690 - my_service_logger - INFO - [injun123] 💬 Final result: {'user_id': '203853', 'session_id': 'injun123', 'response': '안녕하세요, 땡겨요 서비스 상담원입니다.\n\n민생 소비 회복 쿠폰 사용 가능 여부에 대해 문의주셨습니다.\n\n현재 제가 가지고 있는 정보에는 민생 소비 회복 쿠폰에 대한 내용이 없습니다. 번거로우시겠지만, 해당 쿠폰 사용 가능 여부에 대해서는 땡겨요 고객센터로 문의해 주시면 감사하겠습니다.', 'guardrail_result': 'PASS', 'intent': 'QNA'}
+2025-08-29 04:50:13,790 - my_service_logger - INFO - 가드레일 체인이 생성되었습니다.
+2025-08-29 04:50:13,791 - my_service_logger - INFO - 의도분류 체인이 생성되었습니다.
+2025-08-29 04:50:13,859 - my_service_logger - INFO - QnA 에이전트 체인이 생성되었습니다.
+2025-08-29 04:50:18,580 - my_service_logger - INFO - 가드레일 체인이 생성되었습니다.
+2025-08-29 04:50:18,581 - my_service_logger - INFO - 의도분류 체인이 생성되었습니다.
+2025-08-29 04:50:18,647 - my_service_logger - INFO - QnA 에이전트 체인이 생성되었습니다.
+2025-08-29 04:50:20,751 - my_service_logger - INFO - 가드레일 체인이 생성되었습니다.
+2025-08-29 04:50:20,752 - my_service_logger - INFO - 의도분류 체인이 생성되었습니다.
+2025-08-29 04:50:20,821 - my_service_logger - INFO - QnA 에이전트 체인이 생성되었습니다.
+2025-08-29 04:50:50,731 - my_service_logger - INFO - 🤖 Master Router Agent가 초기화되었습니다.
+2025-08-29 04:50:50,732 - my_service_logger - INFO - [injun] 👤 User: 땡겨요가 무엇인가요?
+2025-08-29 04:50:50,732 - my_service_logger - INFO - [injun] 새로운 세션을 시작합니다.
+2025-08-29 04:50:53,941 - my_service_logger - INFO - [injun] 🛡️ Guardrail Check: PASS
+2025-08-29 04:50:55,276 - my_service_logger - INFO - [injun] 🤖 Intent: {'intent': 'QNA', 'desc': '땡겨요 서비스에 대한 기본적인 정보 문의', 'sentiment': 'NEUTRAL'}
+2025-08-29 04:50:55,276 - my_service_logger - INFO - [injun] ✅ Routing to QnA Agent...
+2025-08-29 04:50:59,989 - my_service_logger - INFO - [injun] 🤖 AI response: 안녕하세요, 땡겨요 서비스에 대해 문의주셨군요.
+
+땡겨요는 신한은행에서 '고객과 가맹점 모두에게 이로운 상생 금융'을 목표로 출시한 배달 애플리케이션입니다. 기존 배달앱의 높은 중개수수료와 광고비 부담을 낮추어 소상공인(가맹점주)의 실질적인 소득 증대를 돕고, 소비자에게는 다양한 할인 혜택과 금융 상품 연계 이점을 제공하는 것이 특징입니다.
+
+더 궁금하신 점이 있으시면 언제든지 말씀해주세요.
+2025-08-29 04:50:59,989 - my_service_logger - INFO - [injun] 💬 Final result: {'user_id': '203853', 'session_id': 'injun', 'response': "안녕하세요, 땡겨요 서비스에 대해 문의주셨군요.\n\n땡겨요는 신한은행에서 '고객과 가맹점 모두에게 이로운 상생 금융'을 목표로 출시한 배달 애플리케이션입니다. 기존 배달앱의 높은 중개수수료와 광고비 부담을 낮추어 소상공인(가맹점주)의 실질적인 소득 증대를 돕고, 소비자에게는 다양한 할인 혜택과 금융 상품 연계 이점을 제공하는 것이 특징입니다.\n\n더 궁금하신 점이 있으시면 언제든지 말씀해주세요.", 'guardrail_result': 'PASS', 'intent': 'QNA'}
+2025-08-29 04:53:35,056 - my_service_logger - INFO - 가드레일 체인이 생성되었습니다.
+2025-08-29 04:53:35,057 - my_service_logger - INFO - 의도분류 체인이 생성되었습니다.
+2025-08-29 04:53:35,105 - my_service_logger - INFO - QnA 에이전트 체인이 생성되었습니다.
+2025-08-29 04:54:14,118 - my_service_logger - INFO - 가드레일 체인이 생성되었습니다.
+2025-08-29 04:54:14,119 - my_service_logger - INFO - 의도분류 체인이 생성되었습니다.
+2025-08-29 04:54:14,173 - my_service_logger - INFO - QnA 에이전트 체인이 생성되었습니다.
+2025-08-29 04:54:22,013 - my_service_logger - INFO - 가드레일 체인이 생성되었습니다.
+2025-08-29 04:54:22,014 - my_service_logger - INFO - 의도분류 체인이 생성되었습니다.
+2025-08-29 04:54:22,086 - my_service_logger - INFO - QnA 에이전트 체인이 생성되었습니다.
+2025-08-29 04:54:24,434 - my_service_logger - INFO - 가드레일 체인이 생성되었습니다.
+2025-08-29 04:54:24,435 - my_service_logger - INFO - 의도분류 체인이 생성되었습니다.
+2025-08-29 04:54:24,494 - my_service_logger - INFO - QnA 에이전트 체인이 생성되었습니다.
+2025-08-29 04:54:40,548 - my_service_logger - INFO - 가드레일 체인이 생성되었습니다.
+2025-08-29 04:54:40,548 - my_service_logger - INFO - 의도분류 체인이 생성되었습니다.
+2025-08-29 04:54:40,604 - my_service_logger - INFO - QnA 에이전트 체인이 생성되었습니다.
+2025-08-29 04:54:42,815 - my_service_logger - INFO - 가드레일 체인이 생성되었습니다.
+2025-08-29 04:54:42,816 - my_service_logger - INFO - 의도분류 체인이 생성되었습니다.
+2025-08-29 04:54:42,887 - my_service_logger - INFO - QnA 에이전트 체인이 생성되었습니다.
+2025-08-29 04:56:49,775 - my_service_logger - INFO - 가드레일 체인이 생성되었습니다.
+2025-08-29 04:56:49,776 - my_service_logger - INFO - 의도분류 체인이 생성되었습니다.
+2025-08-29 04:56:49,827 - my_service_logger - INFO - QnA 에이전트 체인이 생성되었습니다.
+2025-08-29 04:58:24,308 - my_service_logger - INFO - 가드레일 체인이 생성되었습니다.
+2025-08-29 04:58:24,309 - my_service_logger - INFO - 의도분류 체인이 생성되었습니다.
+2025-08-29 04:58:24,371 - my_service_logger - INFO - QnA 에이전트 체인이 생성되었습니다.
+2025-08-29 04:58:47,400 - my_service_logger - INFO - 🤖 Master Router Agent가 초기화되었습니다.
+2025-08-29 04:58:47,401 - my_service_logger - INFO - [injun] 👤 User: 배고파요?
+2025-08-29 04:58:47,401 - my_service_logger - INFO - [injun] 새로운 세션을 시작합니다.
+2025-08-29 04:58:50,721 - my_service_logger - INFO - [injun] 🛡️ Guardrail Check: FAIL
+2025-08-29 04:58:50,721 - my_service_logger - INFO - [injun] 💬 Final result: {'user_id': '203853', 'session_id': 'injun', 'response': '죄송합니다. 저는 땡겨요 서비스 관련 질문에만 답변해 드릴 수 있어요. 무엇을 도와드릴까요?', 'guardrail_result': 'FAIL', 'intent': 'UNKNOWN'}
+2025-08-29 05:04:30,964 - my_service_logger - INFO - 🤖 Master Router Agent가 초기화되었습니다.
+2025-08-29 05:04:30,964 - my_service_logger - INFO - [session_20250829_140222_b820374a] 👤 User: ㅇㄴㄹㄴㅇ
+2025-08-29 05:04:30,964 - my_service_logger - INFO - [session_20250829_140222_b820374a] 새로운 세션을 시작합니다.
+2025-08-29 05:04:32,162 - my_service_logger - INFO - [session_20250829_140222_b820374a] 🛡️ Guardrail Check: FAIL
+2025-08-29 05:04:32,162 - my_service_logger - INFO - [session_20250829_140222_b820374a] 💬 Final result: {'user_id': 'user_42ccbe42', 'session_id': 'session_20250829_140222_b820374a', 'response': '죄송합니다. 저는 땡겨요 서비스 관련 질문에만 답변해 드릴 수 있어요. 무엇을 도와드릴까요?', 'guardrail_result': 'FAIL', 'intent': 'UNKNOWN'}
+2025-08-29 05:05:29,366 - my_service_logger - INFO - 🤖 Master Router Agent가 초기화되었습니다.
+2025-08-29 05:05:29,366 - my_service_logger - INFO - [session_20250829_140222_b820374a] 👤 User: ㅁㄴㄹㄴㅇ
+2025-08-29 05:05:29,367 - my_service_logger - INFO - [session_20250829_140222_b820374a] 새로운 세션을 시작합니다.
+2025-08-29 05:05:29,723 - my_service_logger - INFO - [session_20250829_140222_b820374a] 🛡️ Guardrail Check: FAIL
+2025-08-29 05:05:29,724 - my_service_logger - INFO - [session_20250829_140222_b820374a] 💬 Final result: {'user_id': 'user_42ccbe42', 'session_id': 'session_20250829_140222_b820374a', 'response': '죄송합니다. 저는 땡겨요 서비스 관련 질문에만 답변해 드릴 수 있어요. 무엇을 도와드릴까요?', 'guardrail_result': 'FAIL', 'intent': 'UNKNOWN'}
+2025-08-29 05:06:31,570 - my_service_logger - INFO - 🤖 Master Router Agent가 초기화되었습니다.
+2025-08-29 05:06:31,570 - my_service_logger - INFO - [session_20250829_140529_958228d6] 👤 User: 함께땡겨요'
+2025-08-29 05:06:31,570 - my_service_logger - INFO - [session_20250829_140529_958228d6] 새로운 세션을 시작합니다.
+2025-08-29 05:06:31,998 - my_service_logger - INFO - [session_20250829_140529_958228d6] 🛡️ Guardrail Check: FAIL
+2025-08-29 05:06:31,998 - my_service_logger - INFO - [session_20250829_140529_958228d6] 💬 Final result: {'user_id': 'user_8f7e484d', 'session_id': 'session_20250829_140529_958228d6', 'response': '죄송합니다. 저는 땡겨요 서비스 관련 질문에만 답변해 드릴 수 있어요. 무엇을 도와드릴까요?', 'guardrail_result': 'FAIL', 'intent': 'UNKNOWN'}
+2025-08-29 05:06:37,191 - my_service_logger - INFO - 🤖 Master Router Agent가 초기화되었습니다.
+2025-08-29 05:06:37,192 - my_service_logger - INFO - [session_20250829_140529_958228d6] 👤 User: ㄴㅇㄹㄴ
+2025-08-29 05:06:37,192 - my_service_logger - INFO - [session_20250829_140529_958228d6] 새로운 세션을 시작합니다.
+2025-08-29 05:06:37,565 - my_service_logger - INFO - [session_20250829_140529_958228d6] 🛡️ Guardrail Check: FAIL
+2025-08-29 05:06:37,565 - my_service_logger - INFO - [session_20250829_140529_958228d6] 💬 Final result: {'user_id': 'user_8f7e484d', 'session_id': 'session_20250829_140529_958228d6', 'response': '죄송합니다. 저는 땡겨요 서비스 관련 질문에만 답변해 드릴 수 있어요. 무엇을 도와드릴까요?', 'guardrail_result': 'FAIL', 'intent': 'UNKNOWN'}
+2025-08-29 05:06:39,449 - my_service_logger - INFO - 🤖 Master Router Agent가 초기화되었습니다.
+2025-08-29 05:06:39,449 - my_service_logger - INFO - [session_20250829_140529_958228d6] 👤 User: ㄴㅇㄹ
+2025-08-29 05:06:39,449 - my_service_logger - INFO - [session_20250829_140529_958228d6] 새로운 세션을 시작합니다.
+2025-08-29 05:06:39,820 - my_service_logger - INFO - [session_20250829_140529_958228d6] 🛡️ Guardrail Check: FAIL
+2025-08-29 05:06:39,821 - my_service_logger - INFO - [session_20250829_140529_958228d6] 💬 Final result: {'user_id': 'user_8f7e484d', 'session_id': 'session_20250829_140529_958228d6', 'response': '죄송합니다. 저는 땡겨요 서비스 관련 질문에만 답변해 드릴 수 있어요. 무엇을 도와드릴까요?', 'guardrail_result': 'FAIL', 'intent': 'UNKNOWN'}
+2025-08-29 05:09:01,132 - my_service_logger - INFO - 🤖 Master Router Agent가 초기화되었습니다.
+2025-08-29 05:09:01,133 - my_service_logger - INFO - [session_20250829_140529_958228d6] 👤 User: ㅇㄴ
+2025-08-29 05:09:01,133 - my_service_logger - INFO - [session_20250829_140529_958228d6] 새로운 세션을 시작합니다.
+2025-08-29 05:09:01,524 - my_service_logger - INFO - [session_20250829_140529_958228d6] 🛡️ Guardrail Check: FAIL
+2025-08-29 05:09:01,525 - my_service_logger - INFO - [session_20250829_140529_958228d6] 💬 Final result: {'user_id': 'user_8f7e484d', 'session_id': 'session_20250829_140529_958228d6', 'response': '죄송합니다. 저는 땡겨요 서비스 관련 질문에만 답변해 드릴 수 있어요. 무엇을 도와드릴까요?', 'guardrail_result': 'FAIL', 'intent': 'UNKNOWN'}
+2025-08-29 05:11:43,214 - my_service_logger - INFO - 🤖 Master Router Agent가 초기화되었습니다.
+2025-08-29 05:11:43,215 - my_service_logger - INFO - [session_20250829_141135_3802b61e] 👤 User: 함께땡겨요
+2025-08-29 05:11:43,215 - my_service_logger - INFO - [session_20250829_141135_3802b61e] 새로운 세션을 시작합니다.
+2025-08-29 05:11:43,619 - my_service_logger - INFO - [session_20250829_141135_3802b61e] 🛡️ Guardrail Check: FAIL
+2025-08-29 05:11:43,621 - my_service_logger - INFO - [session_20250829_141135_3802b61e] 💬 Final result: {'user_id': 'user_4a19987c', 'session_id': 'session_20250829_141135_3802b61e', 'response': '죄송합니다. 저는 땡겨요 서비스 관련 질문에만 답변해 드릴 수 있어요. 무엇을 도와드릴까요?', 'guardrail_result': 'FAIL', 'intent': 'UNKNOWN'}
+2025-08-29 05:14:27,199 - my_service_logger - INFO - 🤖 Master Router Agent가 초기화되었습니다.
+2025-08-29 05:14:27,199 - my_service_logger - INFO - [test_session_20250829_141424_01] 👤 User: 땡겨요가 무엇인가요?
+2025-08-29 05:14:27,200 - my_service_logger - INFO - [test_session_20250829_141424_01] 새로운 세션을 시작합니다.
+2025-08-29 05:14:27,572 - my_service_logger - INFO - [test_session_20250829_141424_01] 🛡️ Guardrail Check: PASS
+2025-08-29 05:14:28,456 - my_service_logger - INFO - [test_session_20250829_141424_01] 🤖 Intent: {'intent': 'QNA', 'desc': '땡겨요 서비스에 대한 기본적인 정보 문의', 'sentiment': 'NEUTRAL'}
+2025-08-29 05:14:28,456 - my_service_logger - INFO - [test_session_20250829_141424_01] ✅ Routing to QnA Agent...
+2025-08-29 05:14:32,388 - my_service_logger - INFO - [test_session_20250829_141424_01] 🤖 AI response: 안녕하세요, 땡겨요 서비스에 대해 문의주셨군요.
+
+땡겨요는 신한은행에서 '고객과 가맹점 모두에게 이로운 상생 금융'을 목표로 출시한 배달 애플리케이션입니다. 기존 배달앱의 높은 중개수수료와 광고비 부담을 낮추어 소상공인(가맹점주)의 실질적인 소득 증대를 돕고, 소비자에게는 다양한 할인 혜택과 금융 상품 연계 이점을 제공하는 것이 특징입니다.
+
+더 궁금하신 점이 있으시면 언제든지 말씀해주세요.
+2025-08-29 05:14:32,388 - my_service_logger - INFO - [test_session_20250829_141424_01] 💬 Final result: {'user_id': 'test_user_20250829_141424', 'session_id': 'test_session_20250829_141424_01', 'response': "안녕하세요, 땡겨요 서비스에 대해 문의주셨군요.\n\n땡겨요는 신한은행에서 '고객과 가맹점 모두에게 이로운 상생 금융'을 목표로 출시한 배달 애플리케이션입니다. 기존 배달앱의 높은 중개수수료와 광고비 부담을 낮추어 소상공인(가맹점주)의 실질적인 소득 증대를 돕고, 소비자에게는 다양한 할인 혜택과 금융 상품 연계 이점을 제공하는 것이 특징입니다.\n\n더 궁금하신 점이 있으시면 언제든지 말씀해주세요.", 'guardrail_result': 'PASS', 'intent': 'QNA'}
+2025-08-29 05:14:34,444 - my_service_logger - INFO - 🤖 Master Router Agent가 초기화되었습니다.
+2025-08-29 05:14:34,444 - my_service_logger - INFO - [test_session_20250829_141424_02] 👤 User: 땡겨요의 주요 특징은 무엇인가요?
+2025-08-29 05:14:34,444 - my_service_logger - INFO - [test_session_20250829_141424_02] 새로운 세션을 시작합니다.
+2025-08-29 05:14:34,814 - my_service_logger - INFO - [test_session_20250829_141424_02] 🛡️ Guardrail Check: PASS
+2025-08-29 05:14:35,647 - my_service_logger - INFO - [test_session_20250829_141424_02] 🤖 Intent: {'intent': 'QNA', 'desc': '땡겨요 서비스의 주요 특징에 대한 질문', 'sentiment': 'NEUTRAL'}
+2025-08-29 05:14:35,647 - my_service_logger - INFO - [test_session_20250829_141424_02] ✅ Routing to QnA Agent...
+2025-08-29 05:14:37,583 - my_service_logger - INFO - [test_session_20250829_141424_02] 🤖 AI response: 안녕하세요, 땡겨요 서비스에 관심을 가져주셔서 감사합니다.
+
+땡겨요는 신한은행이 '고객과 가맹점 모두에게 이로운 상생 금융'을 목표로 출시한 배달 애플리케이션입니다. 주요 특징은 다음과 같습니다.
+
+*   **가맹점주 혜택:**
+    *   업계 최저 수준인 2%의 중개수수료를 적용합니다.
+    *   입점 수수료와 월 고정비(광고비)를 받지 않는 '3무(無) 정책'을 시행합니다.
+    *   오늘 발생한 매출을 다음 영업일에 바로 입금해 드리는 '당일 정산'을 원칙으로 합니다.
+    *   신한은행을 통해 낮은 금리의 사업자 대출 등 상생 금융 프로그램을 이용할 수 있습니다.
+    *   사장님 앱을 통해 매출, 주문 건수 등 가게 운영에 도움이 되는 통계 데이터를 확인할 수 있습니다.
+    *   고객이 작성한 리뷰에 직접 댓글을 달아 소통할 수 있으며, 악성 리뷰에 대한 중재 요청도 가능합니다.
+    *   자체 배달 라이더가 없어도 '땡배달'을 포함한 여러 배달대행사와 연계하여 배달 서비스를 시작할 수 있습니다.
+
+*   **소비자 혜택:**
+    *   다양한 할인 쿠폰과 금융 연계 혜택을 제공합니다.
+    *   서울시의 경우 '서울배달+' 단독 운영사로서 서울사랑상품권 결제 연동 등 혜택을 제공합니다.
+    *   통신사나 이용 은행에 관계없이 누구나 이용할 수 있으며, 신한은행 고객의 경우 추가적인 혜택을 받을 수 있습니다.
+
+땡겨요는 단기적인 수익보다는 가맹점, 소비자, 라이더 등 플랫폼 참여자 모두가 만족하고 동반 성장하는 건강한 생태계를 만드는 것을 목표로 하고 있습니다.
+
+더 궁금하신 점이 있으시면 언제든지 문의해 주세요.
+2025-08-29 05:14:37,583 - my_service_logger - INFO - [test_session_20250829_141424_02] 💬 Final result: {'user_id': 'test_user_20250829_141424', 'session_id': 'test_session_20250829_141424_02', 'response': "안녕하세요, 땡겨요 서비스에 관심을 가져주셔서 감사합니다.\n\n땡겨요는 신한은행이 '고객과 가맹점 모두에게 이로운 상생 금융'을 목표로 출시한 배달 애플리케이션입니다. 주요 특징은 다음과 같습니다.\n\n*   **가맹점주 혜택:**\n    *   업계 최저 수준인 2%의 중개수수료를 적용합니다.\n    *   입점 수수료와 월 고정비(광고비)를 받지 않는 '3무(無) 정책'을 시행합니다.\n    *   오늘 발생한 매출을 다음 영업일에 바로 입금해 드리는 '당일 정산'을 원칙으로 합니다.\n    *   신한은행을 통해 낮은 금리의 사업자 대출 등 상생 금융 프로그램을 이용할 수 있습니다.\n    *   사장님 앱을 통해 매출, 주문 건수 등 가게 운영에 도움이 되는 통계 데이터를 확인할 수 있습니다.\n    *   고객이 작성한 리뷰에 직접 댓글을 달아 소통할 수 있으며, 악성 리뷰에 대한 중재 요청도 가능합니다.\n    *   자체 배달 라이더가 없어도 '땡배달'을 포함한 여러 배달대행사와 연계하여 배달 서비스를 시작할 수 있습니다.\n\n*   **소비자 혜택:**\n    *   다양한 할인 쿠폰과 금융 연계 혜택을 제공합니다.\n    *   서울시의 경우 '서울배달+' 단독 운영사로서 서울사랑상품권 결제 연동 등 혜택을 제공합니다.\n    *   통신사나 이용 은행에 관계없이 누구나 이용할 수 있으며, 신한은행 고객의 경우 추가적인 혜택을 받을 수 있습니다.\n\n땡겨요는 단기적인 수익보다는 가맹점, 소비자, 라이더 등 플랫폼 참여자 모두가 만족하고 동반 성장하는 건강한 생태계를 만드는 것을 목표로 하고 있습니다.\n\n더 궁금하신 점이 있으시면 언제든지 문의해 주세요.", 'guardrail_result': 'PASS', 'intent': 'QNA'}
+2025-08-29 05:14:39,743 - my_service_logger - INFO - 🤖 Master Router Agent가 초기화되었습니다.
+2025-08-29 05:14:39,743 - my_service_logger - INFO - [test_session_20250829_141424_03] 👤 User: 땡겨요에서 어떤 할인 혜택을 받을 수 있나요?
+2025-08-29 05:14:39,743 - my_service_logger - INFO - [test_session_20250829_141424_03] 새로운 세션을 시작합니다.
+2025-08-29 05:14:40,083 - my_service_logger - INFO - [test_session_20250829_141424_03] 🛡️ Guardrail Check: PASS
+2025-08-29 05:14:40,981 - my_service_logger - INFO - [test_session_20250829_141424_03] 🤖 Intent: {'intent': 'QNA', 'desc': '땡겨요 서비스의 할인 혜택에 대해 문의', 'sentiment': 'NEUTRAL'}
+2025-08-29 05:14:40,982 - my_service_logger - INFO - [test_session_20250829_141424_03] ✅ Routing to QnA Agent...
+2025-08-29 05:14:42,292 - my_service_logger - INFO - [test_session_20250829_141424_03] 🤖 AI response: 안녕하세요, 땡겨요 서비스에 관심을 가져주셔서 감사합니다.
+
+땡겨요에서는 고객님께 다양한 할인 혜택을 제공하고 있습니다.
+
+*   **프로모션 쿠폰:** 땡겨요에서 발행하는 신규 가입 쿠폰, 만렙 쿠폰 등 다양한 프로모션 쿠폰을 통해 할인 혜택을 받으실 수 있습니다. 이러한 프로모션 쿠폰의 비용은 전액 땡겨요(신한은행)에서 부담합니다.
+*   **가게 쿠폰:** 가맹점주님께서 직접 발행하시는 가게 쿠폰을 통해서도 할인 혜택을 받으실 수 있습니다. 이 경우, 할인 비용은 가맹점주님께서 부담하시게 됩니다.
+*   **서울배달+가격제:** 서울시, 신한은행, 치킨 프랜차이즈 본사가 협력하여 소비자에게 파격적인 할인 혜택을 제공하는 제도입니다.
+
+또한, 땡겨요는 신한은행 고객님께 '땡겨요페이' 연동이나 관련 금융 상품 가입 시 추가적인 혜택을 제공할 수 있습니다.
+
+더 궁금하신 점이 있으시면 언제든지 문의해 주세요.
+2025-08-29 05:14:42,292 - my_service_logger - INFO - [test_session_20250829_141424_03] 💬 Final result: {'user_id': 'test_user_20250829_141424', 'session_id': 'test_session_20250829_141424_03', 'response': "안녕하세요, 땡겨요 서비스에 관심을 가져주셔서 감사합니다.\n\n땡겨요에서는 고객님께 다양한 할인 혜택을 제공하고 있습니다.\n\n*   **프로모션 쿠폰:** 땡겨요에서 발행하는 신규 가입 쿠폰, 만렙 쿠폰 등 다양한 프로모션 쿠폰을 통해 할인 혜택을 받으실 수 있습니다. 이러한 프로모션 쿠폰의 비용은 전액 땡겨요(신한은행)에서 부담합니다.\n*   **가게 쿠폰:** 가맹점주님께서 직접 발행하시는 가게 쿠폰을 통해서도 할인 혜택을 받으실 수 있습니다. 이 경우, 할인 비용은 가맹점주님께서 부담하시게 됩니다.\n*   **서울배달+가격제:** 서울시, 신한은행, 치킨 프랜차이즈 본사가 협력하여 소비자에게 파격적인 할인 혜택을 제공하는 제도입니다.\n\n또한, 땡겨요는 신한은행 고객님께 '땡겨요페이' 연동이나 관련 금융 상품 가입 시 추가적인 혜택을 제공할 수 있습니다.\n\n더 궁금하신 점이 있으시면 언제든지 문의해 주세요.", 'guardrail_result': 'PASS', 'intent': 'QNA'}
+2025-08-29 05:14:44,394 - my_service_logger - INFO - 🤖 Master Router Agent가 초기화되었습니다.
+2025-08-29 05:14:44,395 - my_service_logger - INFO - [test_session_20250829_141424_04] 👤 User: 가맹점주에게 어떤 혜택이 있나요?
+2025-08-29 05:14:44,395 - my_service_logger - INFO - [test_session_20250829_141424_04] 새로운 세션을 시작합니다.
+2025-08-29 05:14:44,743 - my_service_logger - INFO - [test_session_20250829_141424_04] 🛡️ Guardrail Check: PASS
+2025-08-29 05:14:45,620 - my_service_logger - INFO - [test_session_20250829_141424_04] 🤖 Intent: {'intent': 'QNA', 'desc': '가맹점주에게 제공되는 혜택에 대한 질문', 'sentiment': 'NEUTRAL'}
+2025-08-29 05:14:45,620 - my_service_logger - INFO - [test_session_20250829_141424_04] ✅ Routing to QnA Agent...
+2025-08-29 05:14:47,901 - my_service_logger - INFO - [test_session_20250829_141424_04] 🤖 AI response: 안녕하세요, 땡겨요 상담원입니다. 가맹점주님께 제공되는 혜택에 대해 안내해 드리겠습니다.
+
+땡겨요는 소상공인 사장님들의 부담을 덜어드리고자 다음과 같은 혜택을 제공하고 있습니다.
+
+*   **입점비 및 월 고정비 면제**: 입점 수수료와 월 고정비(광고비)를 전혀 받지 않는 '3무(無) 정책'을 시행하고 있습니다.
+*   **업계 최저 수준 중개수수료**: 2%의 낮은 중개수수료(결제수수료 별도)를 적용하여 가맹점주님의 실질 소득 증대에 기여합니다.
+*   **빠른 매출 정산**: '당일 정산'을 원칙으로 하여, 오늘 발생한 매출을 다음 영업일에 바로 입금해 드립니다.
+*   **가게 홍보 지원**: 별도의 광고 상품 판매 없이, 사장님께서 직접 단골 고객에게 쿠폰을 발행하는 기능을 통해 고객 관리를 지원하며, 공정한 노출 시스템을 지향합니다.
+*   **가맹점주 전용 대출 상품**: 신한은행에서 땡겨요 입점 가맹점주를 대상으로 낮은 금리의 사업자 대출 등 다양한 상생 금융 프로그램을 운영하고 있습니다.
+
+더 궁금하신 점이 있으시면 언제든지 문의해 주세요.
+2025-08-29 05:14:47,902 - my_service_logger - INFO - [test_session_20250829_141424_04] 💬 Final result: {'user_id': 'test_user_20250829_141424', 'session_id': 'test_session_20250829_141424_04', 'response': "안녕하세요, 땡겨요 상담원입니다. 가맹점주님께 제공되는 혜택에 대해 안내해 드리겠습니다.\n\n땡겨요는 소상공인 사장님들의 부담을 덜어드리고자 다음과 같은 혜택을 제공하고 있습니다.\n\n*   **입점비 및 월 고정비 면제**: 입점 수수료와 월 고정비(광고비)를 전혀 받지 않는 '3무(無) 정책'을 시행하고 있습니다.\n*   **업계 최저 수준 중개수수료**: 2%의 낮은 중개수수료(결제수수료 별도)를 적용하여 가맹점주님의 실질 소득 증대에 기여합니다.\n*   **빠른 매출 정산**: '당일 정산'을 원칙으로 하여, 오늘 발생한 매출을 다음 영업일에 바로 입금해 드립니다.\n*   **가게 홍보 지원**: 별도의 광고 상품 판매 없이, 사장님께서 직접 단골 고객에게 쿠폰을 발행하는 기능을 통해 고객 관리를 지원하며, 공정한 노출 시스템을 지향합니다.\n*   **가맹점주 전용 대출 상품**: 신한은행에서 땡겨요 입점 가맹점주를 대상으로 낮은 금리의 사업자 대출 등 다양한 상생 금융 프로그램을 운영하고 있습니다.\n\n더 궁금하신 점이 있으시면 언제든지 문의해 주세요.", 'guardrail_result': 'PASS', 'intent': 'QNA'}
+2025-08-29 05:14:49,928 - my_service_logger - INFO - 🤖 Master Router Agent가 초기화되었습니다.
+2025-08-29 05:14:49,928 - my_service_logger - INFO - [test_session_20250829_141424_05] 👤 User: 땡겨요 앱은 어디서 다운로드할 수 있나요?
+2025-08-29 05:14:49,928 - my_service_logger - INFO - [test_session_20250829_141424_05] 새로운 세션을 시작합니다.
+2025-08-29 05:14:50,275 - my_service_logger - INFO - [test_session_20250829_141424_05] 🛡️ Guardrail Check: PASS
+2025-08-29 05:14:51,154 - my_service_logger - INFO - [test_session_20250829_141424_05] 🤖 Intent: {'intent': 'AICC', 'desc': '땡겨요 앱 다운로드 경로 문의', 'sentiment': 'NEUTRAL'}
+2025-08-29 05:14:51,154 - my_service_logger - INFO - [test_session_20250829_141424_05] ✅ Routing to AICC Agent... (Not connected)
+2025-08-29 05:14:51,154 - my_service_logger - INFO - [test_session_20250829_141424_05] 🤖 AI response: [AICC 에이전트의 답변이 여기에 표시됩니다]
+2025-08-29 05:14:51,155 - my_service_logger - INFO - [test_session_20250829_141424_05] 💬 Final result: {'user_id': 'test_user_20250829_141424', 'session_id': 'test_session_20250829_141424_05', 'response': '[AICC 에이전트의 답변이 여기에 표시됩니다]', 'guardrail_result': 'PASS', 'intent': 'AICC'}
+2025-08-29 05:14:53,177 - my_service_logger - INFO - 🤖 Master Router Agent가 초기화되었습니다.
+2025-08-29 05:14:53,177 - my_service_logger - INFO - [test_session_20250829_141424_06] 👤 User: 고객센터 연락처가 어떻게 되나요?
+2025-08-29 05:14:53,177 - my_service_logger - INFO - [test_session_20250829_141424_06] 새로운 세션을 시작합니다.
+2025-08-29 05:14:53,531 - my_service_logger - INFO - [test_session_20250829_141424_06] 🛡️ Guardrail Check: PASS
+2025-08-29 05:14:54,380 - my_service_logger - INFO - [test_session_20250829_141424_06] 🤖 Intent: {'intent': 'QNA', 'desc': '고객센터 연락처 문의', 'sentiment': 'NEUTRAL'}
+2025-08-29 05:14:54,381 - my_service_logger - INFO - [test_session_20250829_141424_06] ✅ Routing to QnA Agent...
+2025-08-29 05:14:55,317 - my_service_logger - INFO - [test_session_20250829_141424_06] 🤖 AI response: 안녕하세요, 땡겨요 서비스 전문 상담원입니다.
+
+고객센터 연락처에 대한 문의 주셨는데요. 해당 내용은 제가 아는 정보에 없습니다. 번거로우시겠지만 땡겨요 고객센터로 직접 문의해 주시면 감사하겠습니다.
+2025-08-29 05:14:55,318 - my_service_logger - INFO - [test_session_20250829_141424_06] 💬 Final result: {'user_id': 'test_user_20250829_141424', 'session_id': 'test_session_20250829_141424_06', 'response': '안녕하세요, 땡겨요 서비스 전문 상담원입니다.\n\n고객센터 연락처에 대한 문의 주셨는데요. 해당 내용은 제가 아는 정보에 없습니다. 번거로우시겠지만 땡겨요 고객센터로 직접 문의해 주시면 감사하겠습니다.', 'guardrail_result': 'PASS', 'intent': 'QNA'}
+2025-08-29 05:14:57,377 - my_service_logger - INFO - 🤖 Master Router Agent가 초기화되었습니다.
+2025-08-29 05:14:57,377 - my_service_logger - INFO - [test_session_20250829_141424_07] 👤 User: 주문 취소는 어떻게 하나요?
+2025-08-29 05:14:57,378 - my_service_logger - INFO - [test_session_20250829_141424_07] 새로운 세션을 시작합니다.
+2025-08-29 05:14:57,749 - my_service_logger - INFO - [test_session_20250829_141424_07] 🛡️ Guardrail Check: PASS
+2025-08-29 05:14:58,633 - my_service_logger - INFO - [test_session_20250829_141424_07] 🤖 Intent: {'intent': 'AICC', 'desc': '음식주문 및 배달문의 - 주문 취소 방법 문의', 'sentiment': 'NEUTRAL'}
+2025-08-29 05:14:58,634 - my_service_logger - INFO - [test_session_20250829_141424_07] ✅ Routing to AICC Agent... (Not connected)
+2025-08-29 05:14:58,634 - my_service_logger - INFO - [test_session_20250829_141424_07] 🤖 AI response: [AICC 에이전트의 답변이 여기에 표시됩니다]
+2025-08-29 05:14:58,635 - my_service_logger - INFO - [test_session_20250829_141424_07] 💬 Final result: {'user_id': 'test_user_20250829_141424', 'session_id': 'test_session_20250829_141424_07', 'response': '[AICC 에이전트의 답변이 여기에 표시됩니다]', 'guardrail_result': 'PASS', 'intent': 'AICC'}
+2025-08-29 05:15:00,654 - my_service_logger - INFO - 🤖 Master Router Agent가 초기화되었습니다.
+2025-08-29 05:15:00,654 - my_service_logger - INFO - [test_session_20250829_141424_08] 👤 User: 어떤 결제 방법을 지원하나요?
+2025-08-29 05:15:00,655 - my_service_logger - INFO - [test_session_20250829_141424_08] 새로운 세션을 시작합니다.
+2025-08-29 05:15:01,006 - my_service_logger - INFO - [test_session_20250829_141424_08] 🛡️ Guardrail Check: PASS
+2025-08-29 05:15:01,884 - my_service_logger - INFO - [test_session_20250829_141424_08] 🤖 Intent: {'intent': 'AICC', 'desc': '결제 방법 문의', 'sentiment': 'NEUTRAL'}
+2025-08-29 05:15:01,884 - my_service_logger - INFO - [test_session_20250829_141424_08] ✅ Routing to AICC Agent... (Not connected)
+2025-08-29 05:15:01,884 - my_service_logger - INFO - [test_session_20250829_141424_08] 🤖 AI response: [AICC 에이전트의 답변이 여기에 표시됩니다]
+2025-08-29 05:15:01,884 - my_service_logger - INFO - [test_session_20250829_141424_08] 💬 Final result: {'user_id': 'test_user_20250829_141424', 'session_id': 'test_session_20250829_141424_08', 'response': '[AICC 에이전트의 답변이 여기에 표시됩니다]', 'guardrail_result': 'PASS', 'intent': 'AICC'}
+2025-08-29 05:17:11,166 - my_service_logger - INFO - 🤖 Master Router Agent가 초기화되었습니다.
+2025-08-29 05:17:11,166 - my_service_logger - INFO - [session_20250829_141303_78b32265] 👤 User: ㅇ나ㅓ'
+2025-08-29 05:17:11,166 - my_service_logger - INFO - [session_20250829_141303_78b32265] 새로운 세션을 시작합니다.
+2025-08-29 05:17:11,559 - my_service_logger - INFO - [session_20250829_141303_78b32265] 🛡️ Guardrail Check: FAIL
+2025-08-29 05:17:11,560 - my_service_logger - INFO - [session_20250829_141303_78b32265] 💬 Final result: {'user_id': 'user_595440f9', 'session_id': 'session_20250829_141303_78b32265', 'response': '죄송합니다. 저는 땡겨요 서비스 관련 질문에만 답변해 드릴 수 있어요. 무엇을 도와드릴까요?', 'guardrail_result': 'FAIL', 'intent': 'UNKNOWN'}
+2025-08-29 05:17:15,673 - my_service_logger - INFO - 🤖 Master Router Agent가 초기화되었습니다.
+2025-08-29 05:17:15,674 - my_service_logger - INFO - [session_20250829_141303_78b32265] 👤 User: 안녕하세요?
+2025-08-29 05:17:15,674 - my_service_logger - INFO - [session_20250829_141303_78b32265] 새로운 세션을 시작합니다.
+2025-08-29 05:17:16,074 - my_service_logger - INFO - [session_20250829_141303_78b32265] 🛡️ Guardrail Check: FAIL
+2025-08-29 05:17:16,074 - my_service_logger - INFO - [session_20250829_141303_78b32265] 💬 Final result: {'user_id': 'user_595440f9', 'session_id': 'session_20250829_141303_78b32265', 'response': '죄송합니다. 저는 땡겨요 서비스 관련 질문에만 답변해 드릴 수 있어요. 무엇을 도와드릴까요?', 'guardrail_result': 'FAIL', 'intent': 'UNKNOWN'}
+2025-08-29 05:17:26,566 - my_service_logger - INFO - 🤖 Master Router Agent가 초기화되었습니다.
+2025-08-29 05:17:26,567 - my_service_logger - INFO - [session_20250829_141303_78b32265] 👤 User: 가맹점주에 어떤 혜택이 있나요?
+2025-08-29 05:17:26,567 - my_service_logger - INFO - [session_20250829_141303_78b32265] 새로운 세션을 시작합니다.
+2025-08-29 05:17:26,948 - my_service_logger - INFO - [session_20250829_141303_78b32265] 🛡️ Guardrail Check: PASS
+2025-08-29 05:17:27,791 - my_service_logger - INFO - [session_20250829_141303_78b32265] 🤖 Intent: {'intent': 'QNA', 'desc': '가맹점주에게 제공되는 혜택에 대한 질문', 'sentiment': 'NEUTRAL'}
+2025-08-29 05:17:27,791 - my_service_logger - INFO - [session_20250829_141303_78b32265] ✅ Routing to QnA Agent...
+2025-08-29 05:17:29,126 - my_service_logger - INFO - [session_20250829_141303_78b32265] 🤖 AI response: 안녕하세요, 땡겨요 상담원입니다. 가맹점주님께 제공되는 혜택에 대해 안내해 드리겠습니다.
+
+땡겨요는 소상공인 사장님들의 부담을 덜어드리고자 다음과 같은 혜택을 제공하고 있습니다.
+
+*   **입점비 및 월 고정비 면제**: 입점 수수료와 월 고정비(광고비)를 전혀 받지 않는 '3무(無) 정책'을 시행하고 있습니다.
+*   **업계 최저 수준 중개수수료**: 2%의 낮은 중개수수료(결제수수료 별도)를 적용하여 사장님의 실질 소득 증대에 기여합니다.
+*   **빠른 매출 정산**: '당일 정산'을 원칙으로 하여, 오늘 발생한 매출을 다음 영업일에 바로 입금해 드립니다.
+*   **가게 홍보 지원**: 별도의 광고 상품 판매 없이, 사장님이 직접 단골 고객에게 쿠폰을 발행하는 기능을 지원하며 공정한 노출 시스템을 지향합니다.
+*   **가맹점주 전용 대출 상품**: 신한은행에서 땡겨요 입점 가맹점주를 대상으로 낮은 금리의 사업자 대출 등 다양한 상생 금융 프로그램을 운영하고 있습니다.
+
+더 궁금하신 점이 있으시면 언제든지 문의해 주세요.
+2025-08-29 05:17:29,126 - my_service_logger - INFO - [session_20250829_141303_78b32265] 💬 Final result: {'user_id': 'user_595440f9', 'session_id': 'session_20250829_141303_78b32265', 'response': "안녕하세요, 땡겨요 상담원입니다. 가맹점주님께 제공되는 혜택에 대해 안내해 드리겠습니다.\n\n땡겨요는 소상공인 사장님들의 부담을 덜어드리고자 다음과 같은 혜택을 제공하고 있습니다.\n\n*   **입점비 및 월 고정비 면제**: 입점 수수료와 월 고정비(광고비)를 전혀 받지 않는 '3무(無) 정책'을 시행하고 있습니다.\n*   **업계 최저 수준 중개수수료**: 2%의 낮은 중개수수료(결제수수료 별도)를 적용하여 사장님의 실질 소득 증대에 기여합니다.\n*   **빠른 매출 정산**: '당일 정산'을 원칙으로 하여, 오늘 발생한 매출을 다음 영업일에 바로 입금해 드립니다.\n*   **가게 홍보 지원**: 별도의 광고 상품 판매 없이, 사장님이 직접 단골 고객에게 쿠폰을 발행하는 기능을 지원하며 공정한 노출 시스템을 지향합니다.\n*   **가맹점주 전용 대출 상품**: 신한은행에서 땡겨요 입점 가맹점주를 대상으로 낮은 금리의 사업자 대출 등 다양한 상생 금융 프로그램을 운영하고 있습니다.\n\n더 궁금하신 점이 있으시면 언제든지 문의해 주세요.", 'guardrail_result': 'PASS', 'intent': 'QNA'}
+2025-08-29 05:24:51,402 - my_service_logger - INFO - 🤖 Master Router Agent가 초기화되었습니다.
+2025-08-29 05:24:51,402 - my_service_logger - INFO - [session_20250829_141303_78b32265] 👤 User: 진행중인 이벤트는 뭐가 있나요?
+2025-08-29 05:24:51,402 - my_service_logger - INFO - [session_20250829_141303_78b32265] 새로운 세션을 시작합니다.
+2025-08-29 05:24:51,816 - my_service_logger - INFO - [session_20250829_141303_78b32265] 🛡️ Guardrail Check: PASS
+2025-08-29 05:24:52,669 - my_service_logger - INFO - [session_20250829_141303_78b32265] 🤖 Intent: {'intent': 'QNA', 'desc': '현재 진행 중인 땡겨요 이벤트에 대해 문의합니다.', 'sentiment': 'NEUTRAL'}
+2025-08-29 05:24:52,670 - my_service_logger - INFO - [session_20250829_141303_78b32265] ✅ Routing to QnA Agent...
+2025-08-29 05:24:54,525 - my_service_logger - INFO - [session_20250829_141303_78b32265] 🤖 AI response: 안녕하세요, 땡겨요 서비스 상담원입니다.
+
+현재 진행 중인 이벤트에 대한 문의 주셨는데요. 제가 가진 정보에는 구체적인 이벤트 내용이 명시되어 있지 않습니다.
+
+가장 정확하고 최신 이벤트 정보는 땡겨요 앱 내의 '이벤트' 또는 '공지사항' 섹션을 확인하시거나, 땡겨요 고객센터로 직접 문의해 주시면 상세한 안내를 받으실 수 있습니다.
+
+감사합니다.
+2025-08-29 05:24:54,525 - my_service_logger - INFO - [session_20250829_141303_78b32265] 💬 Final result: {'user_id': 'user_595440f9', 'session_id': 'session_20250829_141303_78b32265', 'response': "안녕하세요, 땡겨요 서비스 상담원입니다.\n\n현재 진행 중인 이벤트에 대한 문의 주셨는데요. 제가 가진 정보에는 구체적인 이벤트 내용이 명시되어 있지 않습니다.\n\n가장 정확하고 최신 이벤트 정보는 땡겨요 앱 내의 '이벤트' 또는 '공지사항' 섹션을 확인하시거나, 땡겨요 고객센터로 직접 문의해 주시면 상세한 안내를 받으실 수 있습니다.\n\n감사합니다.", 'guardrail_result': 'PASS', 'intent': 'QNA'}
+2025-08-29 05:27:04,668 - my_service_logger - INFO - 🤖 Master Router Agent가 초기화되었습니다.
+2025-08-29 05:27:04,668 - my_service_logger - INFO - [session_20250829_142653_af9d8bea] 👤 User: 안녕하세요
+2025-08-29 05:27:04,668 - my_service_logger - INFO - [session_20250829_142653_af9d8bea] 새로운 세션을 시작합니다.
+2025-08-29 05:27:05,094 - my_service_logger - INFO - [session_20250829_142653_af9d8bea] 🛡️ Guardrail Check: FAIL
+2025-08-29 05:27:05,095 - my_service_logger - INFO - [session_20250829_142653_af9d8bea] 💬 Final result: {'user_id': 'user_5cd38014', 'session_id': 'session_20250829_142653_af9d8bea', 'response': '죄송합니다. 저는 땡겨요 서비스 관련 질문에만 답변해 드릴 수 있어요. 무엇을 도와드릴까요?', 'guardrail_result': 'FAIL', 'intent': 'UNKNOWN'}
+2025-08-29 05:28:44,025 - my_service_logger - INFO - 🤖 Master Router Agent가 초기화되었습니다.
+2025-08-29 05:28:44,025 - my_service_logger - INFO - [session_20250829_142828_10480d6e] 👤 User: 고객센터 연락처가 어떻게 되나요?
+2025-08-29 05:28:44,025 - my_service_logger - INFO - [session_20250829_142828_10480d6e] 새로운 세션을 시작합니다.
+2025-08-29 05:28:44,455 - my_service_logger - INFO - [session_20250829_142828_10480d6e] 🛡️ Guardrail Check: PASS
+2025-08-29 05:28:45,263 - my_service_logger - INFO - [session_20250829_142828_10480d6e] 🤖 Intent: {'intent': 'QNA', 'desc': '고객센터 연락처 문의', 'sentiment': 'NEUTRAL'}
+2025-08-29 05:28:45,263 - my_service_logger - INFO - [session_20250829_142828_10480d6e] ✅ Routing to QnA Agent...
+2025-08-29 05:28:46,233 - my_service_logger - INFO - [session_20250829_142828_10480d6e] 🤖 AI response: 안녕하세요, 땡겨요 고객센터입니다.
+
+고객센터 연락처에 대한 문의 주셨습니다. 해당 내용은 제가 아는 정보에 없습니다. 고객센터에 문의해 주시기 바랍니다.
+2025-08-29 05:28:46,234 - my_service_logger - INFO - [session_20250829_142828_10480d6e] 💬 Final result: {'user_id': 'user_f39eaaf3', 'session_id': 'session_20250829_142828_10480d6e', 'response': '안녕하세요, 땡겨요 고객센터입니다.\n\n고객센터 연락처에 대한 문의 주셨습니다. 해당 내용은 제가 아는 정보에 없습니다. 고객센터에 문의해 주시기 바랍니다.', 'guardrail_result': 'PASS', 'intent': 'QNA'}
+2025-08-29 05:29:23,647 - my_service_logger - INFO - 🤖 Master Router Agent가 초기화되었습니다.
+2025-08-29 05:29:23,647 - my_service_logger - INFO - [session_20250829_142917_37c0ac85] 👤 User: 안녕하세요?
+2025-08-29 05:29:23,647 - my_service_logger - INFO - [session_20250829_142917_37c0ac85] 새로운 세션을 시작합니다.
+2025-08-29 05:29:24,018 - my_service_logger - INFO - [session_20250829_142917_37c0ac85] 🛡️ Guardrail Check: FAIL
+2025-08-29 05:29:24,018 - my_service_logger - INFO - [session_20250829_142917_37c0ac85] 💬 Final result: {'user_id': 'user_ab5ea1d6', 'session_id': 'session_20250829_142917_37c0ac85', 'response': '죄송합니다. 저는 땡겨요 서비스 관련 질문에만 답변해 드릴 수 있어요. 무엇을 도와드릴까요?', 'guardrail_result': 'FAIL', 'intent': 'UNKNOWN'}
+2025-08-29 05:30:00,821 - my_service_logger - INFO - 🤖 Master Router Agent가 초기화되었습니다.
+2025-08-29 05:30:00,821 - my_service_logger - INFO - [session_20250829_142953_bc769805] 👤 User: 안녕하세요?
+2025-08-29 05:30:00,822 - my_service_logger - INFO - [session_20250829_142953_bc769805] 새로운 세션을 시작합니다.
+2025-08-29 05:30:01,184 - my_service_logger - INFO - [session_20250829_142953_bc769805] 🛡️ Guardrail Check: FAIL
+2025-08-29 05:30:01,184 - my_service_logger - INFO - [session_20250829_142953_bc769805] 💬 Final result: {'user_id': 'user_cb287add', 'session_id': 'session_20250829_142953_bc769805', 'response': '죄송합니다. 저는 땡겨요 서비스 관련 질문에만 답변해 드릴 수 있어요. 무엇을 도와드릴까요?', 'guardrail_result': 'FAIL', 'intent': 'UNKNOWN'}
+2025-08-29 05:32:05,942 - my_service_logger - INFO - 🤖 Master Router Agent가 초기화되었습니다.
+2025-08-29 05:32:05,942 - my_service_logger - INFO - [session_20250829_143158_e75f23cb] 👤 User: 반갑습니다
+2025-08-29 05:32:05,942 - my_service_logger - INFO - [session_20250829_143158_e75f23cb] 새로운 세션을 시작합니다.
+2025-08-29 05:32:06,364 - my_service_logger - INFO - [session_20250829_143158_e75f23cb] 🛡️ Guardrail Check: FAIL
+2025-08-29 05:32:06,365 - my_service_logger - INFO - [session_20250829_143158_e75f23cb] 💬 Final result: {'user_id': 'user_fe1e6083', 'session_id': 'session_20250829_143158_e75f23cb', 'response': '죄송합니다. 저는 땡겨요 서비스 관련 질문에만 답변해 드릴 수 있어요. 무엇을 도와드릴까요?', 'guardrail_result': 'FAIL', 'intent': 'UNKNOWN'}
+2025-08-29 05:32:36,934 - my_service_logger - INFO - 가드레일 체인이 생성되었습니다.
+2025-08-29 05:32:36,935 - my_service_logger - INFO - 의도분류 체인이 생성되었습니다.
+2025-08-29 05:32:36,984 - my_service_logger - INFO - QnA 에이전트 체인이 생성되었습니다.
+2025-08-29 05:34:23,645 - my_service_logger - INFO - 가드레일 체인이 생성되었습니다.
+2025-08-29 05:34:23,646 - my_service_logger - INFO - 의도분류 체인이 생성되었습니다.
+2025-08-29 05:34:23,691 - my_service_logger - INFO - QnA 에이전트 체인이 생성되었습니다.
+2025-08-29 05:34:30,560 - my_service_logger - INFO - 가드레일 체인이 생성되었습니다.
+2025-08-29 05:34:30,561 - my_service_logger - INFO - 의도분류 체인이 생성되었습니다.
+2025-08-29 05:34:30,610 - my_service_logger - INFO - QnA 에이전트 체인이 생성되었습니다.
+2025-08-29 05:36:31,286 - my_service_logger - INFO - 가드레일 체인이 생성되었습니다.
+2025-08-29 05:36:31,287 - my_service_logger - INFO - 의도분류 체인이 생성되었습니다.
+2025-08-29 05:36:31,327 - my_service_logger - INFO - QnA 에이전트 체인이 생성되었습니다.
+2025-08-29 05:36:39,884 - my_service_logger - INFO - 가드레일 체인이 생성되었습니다.
+2025-08-29 05:36:39,885 - my_service_logger - INFO - 의도분류 체인이 생성되었습니다.
+2025-08-29 05:36:39,928 - my_service_logger - INFO - QnA 에이전트 체인이 생성되었습니다.
+2025-08-29 05:36:42,827 - my_service_logger - INFO - 가드레일 체인이 생성되었습니다.
+2025-08-29 05:36:42,828 - my_service_logger - INFO - 의도분류 체인이 생성되었습니다.
+2025-08-29 05:36:42,949 - my_service_logger - INFO - QnA 에이전트 체인이 생성되었습니다.
+2025-08-29 05:37:15,864 - my_service_logger - INFO - 가드레일 체인이 생성되었습니다.
+2025-08-29 05:37:15,865 - my_service_logger - INFO - 의도분류 체인이 생성되었습니다.
+2025-08-29 05:37:15,904 - my_service_logger - INFO - QnA 에이전트 체인이 생성되었습니다.
+2025-08-29 05:37:32,721 - my_service_logger - INFO - 가드레일 체인이 생성되었습니다.
+2025-08-29 05:37:32,722 - my_service_logger - INFO - 의도분류 체인이 생성되었습니다.
+2025-08-29 05:37:32,770 - my_service_logger - INFO - QnA 에이전트 체인이 생성되었습니다.
+2025-08-29 05:38:59,017 - my_service_logger - INFO - 가드레일 체인이 생성되었습니다.
+2025-08-29 05:38:59,018 - my_service_logger - INFO - 의도분류 체인이 생성되었습니다.
+2025-08-29 05:38:59,065 - my_service_logger - INFO - QnA 에이전트 체인이 생성되었습니다.
+2025-08-29 05:39:00,609 - my_service_logger - INFO - 🤖 Master Router Agent가 초기화되었습니다.
+2025-08-29 05:39:00,609 - my_service_logger - INFO - [session_20250829_053846_ed34bc55] 👤 User: 안녕하세요?
+2025-08-29 05:39:00,610 - my_service_logger - INFO - [session_20250829_053846_ed34bc55] 새로운 세션을 시작합니다.
+2025-08-29 05:39:03,926 - my_service_logger - INFO - [session_20250829_053846_ed34bc55] 🛡️ Guardrail Check: FAIL
+2025-08-29 05:39:03,927 - my_service_logger - INFO - [session_20250829_053846_ed34bc55] 💬 Final result: {'user_id': 'user_da1ffc85', 'session_id': 'session_20250829_053846_ed34bc55', 'response': '죄송합니다. 저는 땡겨요 서비스 관련 질문에만 답변해 드릴 수 있어요. 무엇을 도와드릴까요?', 'guardrail_result': 'FAIL', 'intent': 'UNKNOWN'}
+2025-08-29 05:39:19,458 - my_service_logger - INFO - 가드레일 체인이 생성되었습니다.
+2025-08-29 05:39:19,459 - my_service_logger - INFO - 의도분류 체인이 생성되었습니다.
+2025-08-29 05:39:19,508 - my_service_logger - INFO - QnA 에이전트 체인이 생성되었습니다.
+2025-08-29 05:41:16,483 - my_service_logger - INFO - 🤖 Master Router Agent가 초기화되었습니다.
+2025-08-29 05:41:16,483 - my_service_logger - INFO - [session_20250829_143336_8b4eec41] 👤 User: 소상공인 지원 정책
+2025-08-29 05:41:16,483 - my_service_logger - INFO - [session_20250829_143336_8b4eec41] 새로운 세션을 시작합니다.
+2025-08-29 05:41:18,977 - my_service_logger - INFO - [session_20250829_143336_8b4eec41] 🛡️ Guardrail Check: FAIL
+2025-08-29 05:41:18,977 - my_service_logger - INFO - [session_20250829_143336_8b4eec41] 💬 Final result: {'user_id': 'user_3c3f6371', 'session_id': 'session_20250829_143336_8b4eec41', 'response': '죄송합니다. 저는 땡겨요 서비스 관련 질문에만 답변해 드릴 수 있어요. 무엇을 도와드릴까요?', 'guardrail_result': 'FAIL', 'intent': 'UNKNOWN'}
+2025-08-29 05:44:19,537 - my_service_logger - INFO - 가드레일 체인이 생성되었습니다.
+2025-08-29 05:44:19,538 - my_service_logger - INFO - 의도분류 체인이 생성되었습니다.
+2025-08-29 05:44:19,588 - my_service_logger - INFO - QnA 에이전트 체인이 생성되었습니다.
+2025-08-29 05:45:28,938 - my_service_logger - INFO - 가드레일 체인이 생성되었습니다.
+2025-08-29 05:45:28,938 - my_service_logger - INFO - 의도분류 체인이 생성되었습니다.
+2025-08-29 05:45:28,982 - my_service_logger - INFO - QnA 에이전트 체인이 생성되었습니다.
+2025-08-29 05:45:57,212 - my_service_logger - INFO - 가드레일 체인이 생성되었습니다.
+2025-08-29 05:45:57,213 - my_service_logger - INFO - 의도분류 체인이 생성되었습니다.
+2025-08-29 05:45:57,262 - my_service_logger - INFO - QnA 에이전트 체인이 생성되었습니다.
+2025-08-29 05:46:12,282 - my_service_logger - INFO - 가드레일 체인이 생성되었습니다.
+2025-08-29 05:46:12,283 - my_service_logger - INFO - 의도분류 체인이 생성되었습니다.
+2025-08-29 05:46:12,329 - my_service_logger - INFO - QnA 에이전트 체인이 생성되었습니다.
+2025-08-29 05:46:14,851 - my_service_logger - INFO - 가드레일 체인이 생성되었습니다.
+2025-08-29 05:46:14,852 - my_service_logger - INFO - 의도분류 체인이 생성되었습니다.
+2025-08-29 05:46:14,898 - my_service_logger - INFO - QnA 에이전트 체인이 생성되었습니다.
+2025-08-29 05:46:17,456 - my_service_logger - INFO - 가드레일 체인이 생성되었습니다.
+2025-08-29 05:46:17,456 - my_service_logger - INFO - 의도분류 체인이 생성되었습니다.
+2025-08-29 05:46:17,499 - my_service_logger - INFO - QnA 에이전트 체인이 생성되었습니다.
+2025-08-29 05:47:35,548 - my_service_logger - INFO - 가드레일 체인이 생성되었습니다.
+2025-08-29 05:47:35,549 - my_service_logger - INFO - 의도분류 체인이 생성되었습니다.
+2025-08-29 05:47:35,610 - my_service_logger - INFO - QnA 에이전트 체인이 생성되었습니다.
+2025-08-29 05:47:58,335 - my_service_logger - INFO - 🤖 Master Router Agent가 초기화되었습니다.
+2025-08-29 05:47:58,335 - my_service_logger - INFO - [123123] 👤 User: 땡겨요가 무엇인가요?
+2025-08-29 05:47:58,335 - my_service_logger - INFO - [123123] 새로운 세션을 시작합니다.
+2025-08-29 05:48:00,798 - my_service_logger - INFO - [123123] 🛡️ Guardrail Check: PASS
+2025-08-29 05:48:02,912 - my_service_logger - INFO - [123123] 🤖 Intent: {'intent': 'QNA', 'desc': '땡겨요 서비스에 대한 기본적인 정보 문의', 'sentiment': 'NEUTRAL'}
+2025-08-29 05:48:02,913 - my_service_logger - INFO - [123123] ✅ Routing to QnA Agent...
+2025-08-29 05:48:03,310 - my_service_logger - INFO - [123123] 🤖 AI response: [오류] 벡터스토어 생성 중 오류: Directory not found: 'data'
+2025-08-29 05:48:03,310 - my_service_logger - INFO - [123123] 💬 Final result: {'user_id': '은행테스트', 'session_id': '123123', 'response': "[오류] 벡터스토어 생성 중 오류: Directory not found: 'data'", 'guardrail_result': 'PASS', 'intent': 'QNA'}
+2025-08-29 05:48:35,654 - my_service_logger - INFO - 가드레일 체인이 생성되었습니다.
+2025-08-29 05:48:35,654 - my_service_logger - INFO - 의도분류 체인이 생성되었습니다.
+2025-08-29 05:48:35,698 - my_service_logger - INFO - QnA 에이전트 체인이 생성되었습니다.
+2025-08-29 05:49:20,427 - my_service_logger - INFO - 가드레일 체인이 생성되었습니다.
+2025-08-29 05:49:20,429 - my_service_logger - INFO - 의도분류 체인이 생성되었습니다.
+2025-08-29 05:49:20,468 - my_service_logger - INFO - QnA 에이전트 체인이 생성되었습니다.
+2025-08-29 05:49:40,208 - my_service_logger - INFO - 🤖 Master Router Agent가 초기화되었습니다.
+2025-08-29 05:49:40,208 - my_service_logger - INFO - [123123] 👤 User: 땡겨요가 무엇인가요
+2025-08-29 05:49:40,209 - my_service_logger - INFO - [123123] 새로운 세션을 시작합니다.
+2025-08-29 05:49:43,448 - my_service_logger - INFO - [123123] 🛡️ Guardrail Check: PASS
+2025-08-29 05:49:44,725 - my_service_logger - INFO - [123123] 🤖 Intent: {'intent': 'QNA', 'desc': '땡겨요 서비스에 대한 기본적인 정보 문의', 'sentiment': 'NEUTRAL'}
+2025-08-29 05:49:44,725 - my_service_logger - INFO - [123123] ✅ Routing to QnA Agent...
+2025-08-29 05:49:45,053 - my_service_logger - INFO - [123123] 🤖 AI response: [오류] 벡터스토어 생성 중 오류: Directory not found: 'data'
+2025-08-29 05:49:45,054 - my_service_logger - INFO - [123123] 💬 Final result: {'user_id': '은행테스트', 'session_id': '123123', 'response': "[오류] 벡터스토어 생성 중 오류: Directory not found: 'data'", 'guardrail_result': 'PASS', 'intent': 'QNA'}
+2025-08-29 05:50:23,771 - my_service_logger - INFO - 🤖 Master Router Agent가 초기화되었습니다.
+2025-08-29 05:50:23,771 - my_service_logger - INFO - [session_20250829_143336_8b4eec41] 👤 User: 테스트1
+2025-08-29 05:50:23,771 - my_service_logger - INFO - [session_20250829_143336_8b4eec41] 새로운 세션을 시작합니다.
+2025-08-29 05:50:24,136 - my_service_logger - INFO - [session_20250829_143336_8b4eec41] 🛡️ Guardrail Check: FAIL
+2025-08-29 05:50:24,137 - my_service_logger - INFO - [session_20250829_143336_8b4eec41] 💬 Final result: {'user_id': 'user_3c3f6371', 'session_id': 'session_20250829_143336_8b4eec41', 'response': '죄송합니다. 저는 땡겨요 서비스 관련 질문에만 답변해 드릴 수 있어요. 무엇을 도와드릴까요?', 'guardrail_result': 'FAIL', 'intent': 'UNKNOWN'}
+2025-08-29 05:51:00,542 - my_service_logger - INFO - 가드레일 체인이 생성되었습니다.
+2025-08-29 05:51:00,543 - my_service_logger - INFO - 의도분류 체인이 생성되었습니다.
+2025-08-29 05:51:00,583 - my_service_logger - INFO - QnA 에이전트 체인이 생성되었습니다.
+2025-08-29 05:51:14,798 - my_service_logger - INFO - 🤖 Master Router Agent가 초기화되었습니다.
+2025-08-29 05:51:14,799 - my_service_logger - INFO - [123123] 👤 User: 땡겨요가 무엇인가요
+2025-08-29 05:51:14,799 - my_service_logger - INFO - [123123] 새로운 세션을 시작합니다.
+2025-08-29 05:51:17,297 - my_service_logger - INFO - [123123] 🛡️ Guardrail Check: PASS
+2025-08-29 05:51:19,404 - my_service_logger - INFO - [123123] 🤖 Intent: {'intent': 'QNA', 'desc': '땡겨요 서비스에 대한 기본적인 정보 문의', 'sentiment': 'NEUTRAL'}
+2025-08-29 05:51:19,405 - my_service_logger - INFO - [123123] ✅ Routing to QnA Agent...
+2025-08-29 05:51:19,749 - my_service_logger - INFO - [123123] 🤖 AI response: [오류] 벡터스토어 생성 중 오류: Directory not found: 'data'
+2025-08-29 05:51:19,750 - my_service_logger - INFO - [123123] 💬 Final result: {'user_id': '은행테스트', 'session_id': '123123', 'response': "[오류] 벡터스토어 생성 중 오류: Directory not found: 'data'", 'guardrail_result': 'PASS', 'intent': 'QNA'}
+2025-08-29 05:51:57,153 - my_service_logger - INFO - 가드레일 체인이 생성되었습니다.
+2025-08-29 05:51:57,154 - my_service_logger - INFO - 의도분류 체인이 생성되었습니다.
+2025-08-29 05:51:57,198 - my_service_logger - INFO - QnA 에이전트 체인이 생성되었습니다.
+2025-08-29 05:52:05,776 - my_service_logger - INFO - 🤖 Master Router Agent가 초기화되었습니다.
+2025-08-29 05:52:05,776 - my_service_logger - INFO - [123123] 👤 User: 땡겨요가 무엇인가요
+2025-08-29 05:52:05,776 - my_service_logger - INFO - [123123] 새로운 세션을 시작합니다.
+2025-08-29 05:52:08,212 - my_service_logger - INFO - [123123] 🛡️ Guardrail Check: PASS
+2025-08-29 05:52:10,300 - my_service_logger - INFO - [123123] 🤖 Intent: {'intent': 'QNA', 'desc': '땡겨요 서비스에 대한 기본적인 정보 문의', 'sentiment': 'NEUTRAL'}
+2025-08-29 05:52:10,300 - my_service_logger - INFO - [123123] ✅ Routing to QnA Agent...
+2025-08-29 05:52:24,961 - my_service_logger - INFO - [123123] 🤖 AI response: 안녕하세요! 맛있는 행복 땡겨요입니다.
+
+땡겨요는 다양한 맛있는 음식을 더 편리하게 즐기실 수 있도록 도와주는 배달 서비스입니다. 고객님께서 원하는 음식을 간편하게 주문하실 수 있도록 많은 가게와 제휴하여, 빠르고 안전한 배달 서비스를 제공합니다.
+
+또한, 다양한 프로모션과 할인이 있으니 주문하시기 전에 확인해보시면 더 좋은 혜택을 누릴 수 있습니다. 이용하시다가 궁금한 점이나 불편한 사항이 있으시면 언제든지 고객센터에 문의해 주시거나, 땡겨요 앱 내에서 문의 글을 남겨주시면 신속하게 도와드리겠습니다.
+
+궁금한 점은 언제든지 말씀해 주세요! 감사합니다.
+2025-08-29 05:52:24,961 - my_service_logger - INFO - [123123] 💬 Final result: {'user_id': '은행테스트', 'session_id': '123123', 'response': '안녕하세요! 맛있는 행복 땡겨요입니다.\n\n땡겨요는 다양한 맛있는 음식을 더 편리하게 즐기실 수 있도록 도와주는 배달 서비스입니다. 고객님께서 원하는 음식을 간편하게 주문하실 수 있도록 많은 가게와 제휴하여, 빠르고 안전한 배달 서비스를 제공합니다.\n\n또한, 다양한 프로모션과 할인이 있으니 주문하시기 전에 확인해보시면 더 좋은 혜택을 누릴 수 있습니다. 이용하시다가 궁금한 점이나 불편한 사항이 있으시면 언제든지 고객센터에 문의해 주시거나, 땡겨요 앱 내에서 문의 글을 남겨주시면 신속하게 도와드리겠습니다.\n\n궁금한 점은 언제든지 말씀해 주세요! 감사합니다.', 'guardrail_result': 'PASS', 'intent': 'QNA'}
+2025-08-29 05:54:04,289 - my_service_logger - INFO - 🤖 Master Router Agent가 초기화되었습니다.
+2025-08-29 05:54:04,289 - my_service_logger - INFO - [session_20250829_143336_8b4eec41] 👤 User: 소상공인 지원대책
+2025-08-29 05:54:04,289 - my_service_logger - INFO - [session_20250829_143336_8b4eec41] 새로운 세션을 시작합니다.
+2025-08-29 05:54:04,966 - my_service_logger - INFO - [session_20250829_143336_8b4eec41] 🛡️ Guardrail Check: FAIL
+2025-08-29 05:54:04,967 - my_service_logger - INFO - [session_20250829_143336_8b4eec41] 💬 Final result: {'user_id': 'user_3c3f6371', 'session_id': 'session_20250829_143336_8b4eec41', 'response': '죄송합니다. 저는 땡겨요 서비스 관련 질문에만 답변해 드릴 수 있어요. 무엇을 도와드릴까요?', 'guardrail_result': 'FAIL', 'intent': 'UNKNOWN'}
+2025-08-29 05:56:29,400 - my_service_logger - INFO - 🤖 Master Router Agent가 초기화되었습니다.
+2025-08-29 05:56:29,400 - my_service_logger - INFO - [session_20250829_145615_4888d867] 👤 User: 메세지 테스트 테스트
+2025-08-29 05:56:29,400 - my_service_logger - INFO - [session_20250829_145615_4888d867] 새로운 세션을 시작합니다.
+2025-08-29 05:56:29,817 - my_service_logger - INFO - [session_20250829_145615_4888d867] 🛡️ Guardrail Check: FAIL
+2025-08-29 05:56:29,817 - my_service_logger - INFO - [session_20250829_145615_4888d867] 💬 Final result: {'user_id': 'user_1f34d556', 'session_id': 'session_20250829_145615_4888d867', 'response': '죄송합니다. 저는 땡겨요 서비스 관련 질문에만 답변해 드릴 수 있어요. 무엇을 도와드릴까요?', 'guardrail_result': 'FAIL', 'intent': 'UNKNOWN'}
+2025-08-29 05:57:17,816 - my_service_logger - INFO - 가드레일 체인이 생성되었습니다.
+2025-08-29 05:57:17,817 - my_service_logger - INFO - 의도분류 체인이 생성되었습니다.
+2025-08-29 05:57:17,862 - my_service_logger - INFO - QnA 에이전트 체인이 생성되었습니다.
+2025-08-29 05:57:29,376 - my_service_logger - INFO - 🤖 Master Router Agent가 초기화되었습니다.
+2025-08-29 05:57:29,376 - my_service_logger - INFO - [123123] 👤 User: 땡겨요가 무엇인가요
+2025-08-29 05:57:29,376 - my_service_logger - INFO - [123123] 새로운 세션을 시작합니다.
+2025-08-29 05:57:32,641 - my_service_logger - INFO - [123123] 🛡️ Guardrail Check: PASS
+2025-08-29 05:57:34,013 - my_service_logger - INFO - [123123] 🤖 Intent: {'intent': 'QNA', 'desc': '땡겨요 서비스에 대한 기본적인 정보 문의', 'sentiment': 'NEUTRAL'}
+2025-08-29 05:57:34,013 - my_service_logger - INFO - [123123] ✅ Routing to QnA Agent...
+2025-08-29 05:57:41,219 - my_service_logger - INFO - [123123] 🤖 AI response: 땡겨요는 음식 배달 서비스로, 사용자가 원하는 음식을 간편하게 주문할 수 있도록 도와주는 배달앱입니다. 다양한 음식점과 메뉴를 제공하며, 신속하고 편리한 배달 서비스를 중점으로 운영되고 있습니다.
+2025-08-29 05:57:41,220 - my_service_logger - INFO - [123123] 💬 Final result: {'user_id': '은행테스트', 'session_id': '123123', 'response': '땡겨요는 음식 배달 서비스로, 사용자가 원하는 음식을 간편하게 주문할 수 있도록 도와주는 배달앱입니다. 다양한 음식점과 메뉴를 제공하며, 신속하고 편리한 배달 서비스를 중점으로 운영되고 있습니다.', 'guardrail_result': 'PASS', 'intent': 'QNA'}
+2025-08-29 06:07:57,800 - my_service_logger - INFO - 가드레일 체인이 생성되었습니다.
+2025-08-29 06:07:57,801 - my_service_logger - INFO - 의도분류 체인이 생성되었습니다.
+2025-08-29 06:07:57,840 - my_service_logger - INFO - QnA 에이전트 체인이 생성되었습니다.
+2025-08-29 06:08:04,732 - my_service_logger - INFO - 🤖 Master Router Agent가 초기화되었습니다.
+2025-08-29 06:08:04,733 - my_service_logger - INFO - [session_20250829_150331_66ed3455] 👤 User: 소상공인 지원정책
+2025-08-29 06:08:04,733 - my_service_logger - INFO - [session_20250829_150331_66ed3455] 새로운 세션을 시작합니다.
+2025-08-29 06:08:07,212 - my_service_logger - INFO - [session_20250829_150331_66ed3455] 🛡️ Guardrail Check: FAIL
+2025-08-29 06:08:07,212 - my_service_logger - INFO - [session_20250829_150331_66ed3455] 💬 Final result: {'user_id': 'user_2cf7246e', 'session_id': 'session_20250829_150331_66ed3455', 'response': '죄송합니다. 저는 땡겨요 서비스 관련 질문에만 답변해 드릴 수 있어요. 무엇을 도와드릴까요?', 'guardrail_result': 'FAIL', 'intent': 'UNKNOWN'}
+2025-08-29 06:11:48,290 - my_service_logger - INFO - 가드레일 체인이 생성되었습니다.
+2025-08-29 06:11:48,291 - my_service_logger - INFO - 의도분류 체인이 생성되었습니다.
+2025-08-29 06:11:48,345 - my_service_logger - INFO - QnA 에이전트 체인이 생성되었습니다.
+2025-08-29 06:12:09,733 - my_service_logger - INFO - 🤖 Master Router Agent가 초기화되었습니다.
+2025-08-29 06:12:09,733 - my_service_logger - INFO - [session_20250829_150913_32289b3a] 👤 User: 소상공인 지원 정책
+2025-08-29 06:12:09,733 - my_service_logger - INFO - [session_20250829_150913_32289b3a] 새로운 세션을 시작합니다.
+2025-08-29 06:12:12,239 - my_service_logger - INFO - [session_20250829_150913_32289b3a] 🛡️ Guardrail Check: FAIL
+2025-08-29 06:12:12,239 - my_service_logger - INFO - [session_20250829_150913_32289b3a] 💬 Final result: {'user_id': 'user_703f408b', 'session_id': 'session_20250829_150913_32289b3a', 'response': '죄송합니다. 저는 땡겨요 서비스 관련 질문에만 답변해 드릴 수 있어요. 무엇을 도와드릴까요?', 'guardrail_result': 'FAIL', 'intent': 'UNKNOWN'}
+2025-08-29 06:12:20,089 - my_service_logger - INFO - 🤖 Master Router Agent가 초기화되었습니다.
+2025-08-29 06:12:20,089 - my_service_logger - INFO - [session_20250829_150913_32289b3a] 👤 User: 소상공인
+2025-08-29 06:12:20,089 - my_service_logger - INFO - [session_20250829_150913_32289b3a] 새로운 세션을 시작합니다.
+2025-08-29 06:12:20,457 - my_service_logger - INFO - [session_20250829_150913_32289b3a] 🛡️ Guardrail Check: FAIL
+2025-08-29 06:12:20,457 - my_service_logger - INFO - [session_20250829_150913_32289b3a] 💬 Final result: {'user_id': 'user_703f408b', 'session_id': 'session_20250829_150913_32289b3a', 'response': '죄송합니다. 저는 땡겨요 서비스 관련 질문에만 답변해 드릴 수 있어요. 무엇을 도와드릴까요?', 'guardrail_result': 'FAIL', 'intent': 'UNKNOWN'}
+2025-08-29 06:15:59,784 - my_service_logger - INFO - 가드레일 체인이 생성되었습니다.
+2025-08-29 06:15:59,786 - my_service_logger - INFO - 의도분류 체인이 생성되었습니다.
+2025-08-29 06:15:59,832 - my_service_logger - INFO - QnA 에이전트 체인이 생성되었습니다.
+2025-08-29 06:16:09,890 - my_service_logger - INFO - 🤖 Master Router Agent가 초기화되었습니다.
+2025-08-29 06:16:09,890 - my_service_logger - INFO - [session_20250829_061558_f50a6473] 👤 User: 소상공인 지원정책
+2025-08-29 06:16:09,890 - my_service_logger - INFO - [session_20250829_061558_f50a6473] 새로운 세션을 시작합니다.
+2025-08-29 06:16:12,440 - my_service_logger - INFO - [session_20250829_061558_f50a6473] 🛡️ Guardrail Check: FAIL
+2025-08-29 06:16:12,440 - my_service_logger - INFO - [session_20250829_061558_f50a6473] 💬 Final result: {'user_id': 'user_d39171e4', 'session_id': 'session_20250829_061558_f50a6473', 'response': '죄송합니다. 저는 땡겨요 서비스 관련 질문에만 답변해 드릴 수 있어요. 무엇을 도와드릴까요?', 'guardrail_result': 'FAIL', 'intent': 'UNKNOWN'}
+2025-08-29 06:16:20,890 - my_service_logger - INFO - 🤖 Master Router Agent가 초기화되었습니다.
+2025-08-29 06:16:20,890 - my_service_logger - INFO - [123123] 👤 User: 배달 취소해주세요
+2025-08-29 06:16:20,890 - my_service_logger - INFO - [123123] 새로운 세션을 시작합니다.
+2025-08-29 06:16:21,280 - my_service_logger - INFO - [123123] 🛡️ Guardrail Check: PASS
+2025-08-29 06:16:22,139 - my_service_logger - INFO - [123123] 🤖 Intent: {'intent': 'AICC', 'desc': '배달 취소 요청', 'sentiment': 'NEUTRAL'}
+2025-08-29 06:16:22,140 - my_service_logger - INFO - [123123] ✅ Routing to AICC Agent... (Not connected)
+2025-08-29 06:16:22,140 - my_service_logger - INFO - [123123] 🤖 AI response: 단순 Q&A가 아니군요. 새로운 Agent 개발이 필요합니다!
+2025-08-29 06:16:22,140 - my_service_logger - INFO - [123123] 💬 Final result: {'user_id': '은행테스트', 'session_id': '123123', 'response': '단순 Q&A가 아니군요. 새로운 Agent 개발이 필요합니다!', 'guardrail_result': 'PASS', 'intent': 'AICC'}
+2025-08-29 06:19:00,941 - my_service_logger - INFO - 가드레일 체인이 생성되었습니다.
+2025-08-29 06:19:00,943 - my_service_logger - INFO - 의도분류 체인이 생성되었습니다.
+2025-08-29 06:19:00,995 - my_service_logger - INFO - QnA 에이전트 체인이 생성되었습니다.
+2025-08-29 06:21:50,183 - my_service_logger - INFO - 🤖 Master Router Agent가 초기화되었습니다.
+2025-08-29 06:21:50,183 - my_service_logger - INFO - [session_20250829_062132_569845b1] 👤 User: 함께땡겨요
+2025-08-29 06:21:50,183 - my_service_logger - INFO - [session_20250829_062132_569845b1] 새로운 세션을 시작합니다.
+2025-08-29 06:21:52,650 - my_service_logger - INFO - [session_20250829_062132_569845b1] 🛡️ Guardrail Check: FAIL
+2025-08-29 06:21:52,651 - my_service_logger - INFO - [session_20250829_062132_569845b1] 💬 Final result: {'user_id': 'user_4c414190', 'session_id': 'session_20250829_062132_569845b1', 'response': '죄송합니다. 저는 땡겨요 서비스 관련 질문에만 답변해 드릴 수 있어요. 무엇을 도와드릴까요?', 'guardrail_result': 'FAIL', 'intent': 'UNKNOWN'}

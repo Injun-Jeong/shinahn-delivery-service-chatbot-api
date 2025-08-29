@@ -67,8 +67,8 @@ def _create_and_save_vector_store(knowledge_base_dir: str, vector_store_path: st
 # --- 2. 검색/답변 기능: 저장된 벡터 스토어를 로드하여 RAG 체인 생성 ---
 def get_qna_agent():
 
-    knowledge_base_dir = "/Users/injun/Desktop/ai_project/llm-serve-module/res/qna"
-    vector_store_path = "/Users/injun/Desktop/ai_project/llm-serve-module/vector_store/ddaenggyo_faq_index"
+    knowledge_base_dir = "/home/injun/workspace/shinahn-delivery-service-chatbot/res/qna"
+    vector_store_path = "/home/injun/workspace/shinahn-delivery-service-chatbot/vector_store/ddaenggyo_faq_index"
 
     """
     FAISS 벡터 스토어를 로드(없으면 생성)하여 RAG QnA 체인을 생성합니다.
