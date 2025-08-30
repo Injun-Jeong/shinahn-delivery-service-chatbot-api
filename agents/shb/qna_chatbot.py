@@ -1,6 +1,11 @@
 import os
 import re
+import json
+import hashlib
+import glob
+from datetime import datetime
 from typing import Optional, List, Dict
+from pathlib import Path
 from dotenv import load_dotenv
 
 from langchain_openai import ChatOpenAI, OpenAIEmbeddings
@@ -23,6 +28,14 @@ SCORE_THRESHOLD = float(os.getenv("SCORE_THRESHOLD", "0.3"))
 DOC_CHAR_BUDGET = int(os.getenv("DOC_CHAR_BUDGET", "5000"))
 MMR_LAMBDA = float(os.getenv("MMR_LAMBDA", "0.5"))
 
+# FAISS 캐시 관련 환경변수
+INDEX_DIR = os.getenv("INDEX_DIR", "/home/injun/workspace/shinahn-delivery-service-chatbot/agents/shb/index/faiss")
+REBUILD_INDEX = os.getenv("REBUILD_INDEX", "false").lower() == "true"
+ALLOW_DESERIALIZE = os.getenv("ALLOW_DESERIALIZE", "true").lower() == "true"
+EMBEDDING_MODEL = os.getenv("EMBEDDING_MODEL", "text-embedding-3-small")
+CHUNK_SIZE = int(os.getenv("CHUNK_SIZE", "800"))
+CHUNK_OVERLAP = int(os.getenv("CHUNK_OVERLAP", "120"))
+
 _llm = None
 _vs = None
 _chain: Optional[RetrievalQA] = None
@@ -34,6 +47,166 @@ def _ensure_llm():
             raise RuntimeError("OPENAI_API_KEY 가 .env 에 설정되지 않았습니다.")
         _llm = ChatOpenAI(model="gpt-4o-mini", api_key=api_key)
     return _llm
+
+
+def compute_data_fingerprint(data_dir: str = "/home/injun/workspace/shinahn-delivery-service-chatbot/agents/shb/data") -> str:
+    """데이터 지문(fingerprint) 계산"""
+    data_path = Path(data_dir)
+    if not data_path.exists():
+        return ""
+    
+    # 모든 .md 파일 경로를 안정 정렬
+    md_files = sorted(glob.glob(str(data_path / "**/*.md"), recursive=True))
+    
+    # 각 파일의 경로와 내용을 해시에 추가
+    hasher = hashlib.sha256()
+    for file_path in md_files:
+        try:
+            with open(file_path, 'r', encoding='utf-8') as f:
+                content = f.read()
+                # 파일 경로와 내용을 함께 해시
+                file_info = f"{file_path}:{content}"
+                hasher.update(file_info.encode('utf-8'))
+        except Exception as e:
+            print(f"[경고] 파일 읽기 실패: {file_path} - {e}")
+    
+    return hasher.hexdigest()
+
+def _load_manifest() -> Optional[Dict]:
+    """매니페스트 파일 로드"""
+    manifest_path = Path(INDEX_DIR) / "manifest.json"
+    if not manifest_path.exists():
+        return None
+    
+    try:
+        with open(manifest_path, 'r', encoding='utf-8') as f:
+            return json.load(f)
+    except Exception as e:
+        print(f"[인덱스] 매니페스트 로드 실패: {e}")
+        return None
+
+def _save_manifest(manifest_data: Dict):
+    """매니페스트 파일 저장"""
+    index_path = Path(INDEX_DIR)
+    index_path.mkdir(parents=True, exist_ok=True)
+    
+    manifest_path = index_path / "manifest.json"
+    try:
+        with open(manifest_path, 'w', encoding='utf-8') as f:
+            json.dump(manifest_data, f, ensure_ascii=False, indent=2)
+    except Exception as e:
+        print(f"[인덱스] 매니페스트 저장 실패: {e}")
+
+def _load_faiss_if_valid(embeddings, data_dir: str = "/home/injun/workspace/shinahn-delivery-service-chatbot/agents/shb/data") -> Optional[FAISS]:
+    """유효한 FAISS 인덱스 로드"""
+    index_path = Path(INDEX_DIR)
+    if not index_path.exists():
+        return None
+    
+    manifest = _load_manifest()
+    if not manifest:
+        return None
+    
+    # 현재 설정과 매니페스트 비교
+    current_fingerprint = compute_data_fingerprint(data_dir)
+    if manifest.get('fingerprint') != current_fingerprint:
+        print("[인덱스] 데이터 변경 감지 → 재생성 필요")
+        return None
+    
+    if manifest.get('embedding_model') != EMBEDDING_MODEL:
+        print("[인덱스] 임베딩 모델 변경 → 재생성 필요")
+        return None
+    
+    if manifest.get('chunk_size') != CHUNK_SIZE or manifest.get('chunk_overlap') != CHUNK_OVERLAP:
+        print("[인덱스] 청크 파라미터 변경 → 재생성 필요")
+        return None
+    
+    # FAISS 인덱스 로드 시도
+    try:
+        if not ALLOW_DESERIALIZE:
+            print("[인덱스] ALLOW_DESERIALIZE=false로 설정되어 로드 건너뜀")
+            return None
+        
+        vectorstore = FAISS.load_local(str(index_path), embeddings, allow_dangerous_deserialization=ALLOW_DESERIALIZE)
+        doc_count = manifest.get('doc_count', 0)
+        print(f"[인덱스] 로드 완료: {INDEX_DIR} (docs={doc_count})")
+        return vectorstore
+    except Exception as e:
+        print(f"[인덱스] 로드 실패: {e}")
+        return None
+
+def _build_and_save_vectorstore(data_dir: str, embeddings) -> FAISS:
+    """벡터스토어 빌드 및 저장"""
+    try:
+        # 일반 마크다운 파일 로드
+        loader = DirectoryLoader(data_dir, glob="**/*.md", loader_cls=TextLoader, recursive=True, loader_kwargs={"encoding": "utf-8"})
+        docs = loader.load()
+        
+        # markdown_data.md 파일 특별 처리
+        markdown_data_docs = []
+        for doc in docs:
+            if 'markdown_data.md' in doc.metadata.get('source', ''):
+                # 테이블 데이터 파싱
+                data_rows = _parse_markdown_table(doc.page_content)
+                if data_rows:
+                    markdown_data_docs.extend(_create_structured_documents(data_rows))
+            else:
+                # 일반 마크다운 파일은 그대로 사용
+                markdown_data_docs.append(doc)
+        
+        if not markdown_data_docs:
+            raise RuntimeError(f"'{data_dir}' 폴더에서 .md 문서를 찾지 못했습니다.")
+        
+        # 청크 분할
+        splitter = RecursiveCharacterTextSplitter(chunk_size=CHUNK_SIZE, chunk_overlap=CHUNK_OVERLAP)
+        chunks = splitter.split_documents(markdown_data_docs)
+        
+        # FAISS 인덱스 생성
+        vectorstore = FAISS.from_documents(chunks, embeddings)
+        
+        # 인덱스 저장
+        index_path = Path(INDEX_DIR)
+        index_path.mkdir(parents=True, exist_ok=True)
+        vectorstore.save_local(str(index_path))
+        
+        # 매니페스트 저장
+        manifest_data = {
+            'fingerprint': compute_data_fingerprint(data_dir),
+            'embedding_model': EMBEDDING_MODEL,
+            'chunk_size': CHUNK_SIZE,
+            'chunk_overlap': CHUNK_OVERLAP,
+            'doc_count': len(chunks),
+            'built_at': datetime.utcnow().isoformat() + 'Z'
+        }
+        _save_manifest(manifest_data)
+        
+        print(f"[인덱스] 재생성 및 저장 완료: {INDEX_DIR} (chunks={len(chunks)})")
+        return vectorstore
+        
+    except Exception as e:
+        raise RuntimeError(f"벡터스토어 생성 중 오류: {str(e)}")
+
+def _ensure_vectorstore(data_dir: str = "/home/injun/workspace/shinahn-delivery-service-chatbot/agents/shb/data"):
+    """벡터스토어 보장 함수 - 캐시 우선 로드"""
+    global _vs
+    if _vs is None:
+        try:
+            embeddings = OpenAIEmbeddings(api_key=api_key, model=EMBEDDING_MODEL)
+            
+            # 강제 재빌드 체크
+            if REBUILD_INDEX:
+                print("[인덱스] REBUILD_INDEX=true로 설정되어 강제 재생성")
+                _vs = _build_and_save_vectorstore(data_dir, embeddings)
+            else:
+                # 로드 시도
+                _vs = _load_faiss_if_valid(embeddings, data_dir)
+                if _vs is None:
+                    # 로드 실패 시 재빌드
+                    _vs = _build_and_save_vectorstore(data_dir, embeddings)
+                    
+        except Exception as e:
+            raise RuntimeError(f"벡터스토어 준비 중 오류: {str(e)}")
+    return _vs
 
 def pick_k(query: str, k_def: int, k_max: int) -> int:
     """동적으로 K 값을 결정"""
@@ -121,41 +294,6 @@ def _create_structured_documents(data_rows: List[Dict]) -> List[Document]:
     
     return documents
 
-def _ensure_vectorstore(data_dir: str = "/home/injun/workspace/shinahn-delivery-service-chatbot/agents/shb/data"):
-    global _vs
-    if _vs is None:
-        try:
-            # 일반 마크다운 파일 로드
-            loader = DirectoryLoader(data_dir, glob="**/*.md", loader_cls=TextLoader, recursive=True, loader_kwargs={"encoding": "utf-8"})
-            docs = loader.load()
-            
-            # markdown_data.md 파일 특별 처리
-            markdown_data_docs = []
-            for doc in docs:
-                if 'markdown_data.md' in doc.metadata.get('source', ''):
-                    # 테이블 데이터 파싱
-                    data_rows = _parse_markdown_table(doc.page_content)
-                    if data_rows:
-                        markdown_data_docs.extend(_create_structured_documents(data_rows))
-                else:
-                    # 일반 마크다운 파일은 그대로 사용
-                    markdown_data_docs.append(doc)
-            
-            if not markdown_data_docs:
-                raise RuntimeError(f"'{data_dir}' 폴더에서 .md 문서를 찾지 못했습니다.")
-            
-            # 청크 분할
-            splitter = RecursiveCharacterTextSplitter(chunk_size=800, chunk_overlap=120)
-            chunks = splitter.split_documents(markdown_data_docs)
-            
-            # 임베딩 및 벡터스토어 생성
-            embeddings = OpenAIEmbeddings(api_key=api_key, model="text-embedding-3-small")
-            _vs = FAISS.from_documents(chunks, embeddings)
-            
-        except Exception as e:
-            raise RuntimeError(f"벡터스토어 생성 중 오류: {str(e)}")
-    return _vs
-
 def build_chain(data_dir: str = "/home/injun/workspace/shinahn-delivery-service-chatbot/agents/shb/data"):
     """체인 구성 - LCEL 방식으로 변경"""
     global _chain
@@ -207,3 +345,24 @@ def answer(query: str) -> str:
         return result
     except Exception as e:
         return f"[오류] {e}"
+
+# CLI 워밍업 기능 (선택)
+if __name__ == "__main__":
+    import argparse
+    
+    parser = argparse.ArgumentParser(description="땡겨요 챗봇 인덱스 준비")
+    parser.add_argument("--data", default="data", help="데이터 디렉토리 경로")
+    parser.add_argument("--rebuild", action="store_true", help="강제 재생성")
+    
+    args = parser.parse_args()
+    
+    # 환경변수 오버라이드
+    if args.rebuild:
+        os.environ["REBUILD_INDEX"] = "true"
+    
+    try:
+        _ensure_vectorstore(args.data)
+        print("✅ 인덱스 준비 완료")
+    except Exception as e:
+        print(f"❌ 인덱스 준비 실패: {e}")
+        exit(1)
