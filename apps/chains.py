@@ -46,14 +46,12 @@ intent_classification_prompt_json = ChatPromptTemplate.from_messages([
 
         [의도]
         - QNA: 땡겨요 서비스 관련 일반 질문(예: 진행 중인 이벤트 등)
-        - AICC
-          1. '음식주문 및 배달문의': 주문 현황, 주문 변경(배달 위치, 메뉴 등), 주문 취소, 결제 수단, 현금영수증, 오배송
-          2. '이용방법 및 회원정보 문의': 회원가입/탈퇴, 비회원 주문, 푸시 알림, 비밀번호찾기
+        - CS: 회원정보 확인/변경, 강성민원, 보상 등 고객상담센터 직접 연결 필요 여부를 판단하여 연결 정보를 생성하는 에이전트
           
         답변은 반드시 아래의 JSON 형식이어야 하며, 다른 어떤 텍스트도 포함해서는 안 됩니다.
         ```json
         {{
-          "intent": "QNA|AICC",
+          "intent": "QNA|CS",
           "desc": "사용자 질문 요약 및 의도 상세",
           "sentiment": "POSITIVE|NEUTRAL|NEGATIVE"
         }}

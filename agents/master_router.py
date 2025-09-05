@@ -1,10 +1,13 @@
 from datetime import datetime
+from pydantic import BaseModel
 from langchain_core.messages import HumanMessage, AIMessage
 from apps.session_manager import SessionManager
 from apps.chains import guardrail_chain, orchestration_chain, qna_chain
 from apps.setup import logger
 
 from .shb import qna_chatbot
+from .shs.cs_agnet_langchain import CustomerSupportAnalyzerAgent
+
 
 
 class MasterRouter:
@@ -20,6 +23,7 @@ class MasterRouter:
         self.guardrail_chain = guardrail_chain
         self.orchestration_chain = orchestration_chain
         self.qna_chain = qna_chain
+        #self.cs_agent = CustomerSupportAnalyzerAgent()
         logger.info("🤖 Master Router Agent가 초기화되었습니다.")
 
 
@@ -74,13 +78,48 @@ class MasterRouter:
                 """
 
                 """ shb version """
-                response = qna_chatbot.answer(user_input)
+
+                param = f"""
+                HUMAN은 사용자 질문입니다.
+                중요한 것은 바로 이 HUMAN에 대해 답변을 잘 하는 것입니다.
+                
+                RECENT_HISTORY는 최근 대화 이력입니다.
+                최근 대화 이력이 현재 질문에 대한 답변 생성에 너무 큰 영향을 끼치면 안 됩니다.
+                현재 질문에 대한 답변 생성에 필요한 정보가 있다면 참고용으로만 활용하세요.
+
+                [HUMAN: {user_input}, RECENT_HISTORY: {recent_history}]
+                """
+
+                print(f"💬 USER: {param}")
+                response = qna_chatbot.answer(param)
                 print(f"🤖 AI: {response}")
 
 
-            elif intent == 'AICC':
-                logger.info(f"[{session_id}] ✅ Routing to AICC Agent... (Not connected)")
-                response = "단순 Q&A가 아니군요. 새로운 Agent 개발이 필요합니다!"
+            elif intent == 'CS':
+                logger.info(f"[{session_id}] ✅ Routing to CS Agent... (Not connected)")
+                #response = "단순 Q&A가 아니군요. 새로운 Agent 개발이 필요합니다!"
+
+                class CustomerQuery(BaseModel):
+                    """고객 질문 모델"""
+                    question: str
+                    user_id: str = None
+                    context: str = ""
+                    priority: str = "normal"  # low, normal, high, urgent
+
+                query = CustomerQuery(
+                    question=user_input,
+                    user_id=user_id,
+                    priority="high"
+                )
+                print(f"💬 USER: {query}")
+                cs_agent = CustomerSupportAnalyzerAgent()
+                result = cs_agent.process_query(query)
+
+                response = result.model_dump_json()
+                
+#                response = response + "\n\n  * 관련 문의는 고객센터 게시판에 전달되었으며, 추후 상담원을 통해 상세한 추가 답변 드리겠습니다."
+                print(f"🤖 AI: {response}")
+
             
             else:
                 response = "무슨 말씀이신지 잘 모르겠어요. 좀 더 자세히 설명해 주시겠어요?"

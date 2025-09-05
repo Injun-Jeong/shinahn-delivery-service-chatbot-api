@@ -31,4 +31,3 @@ def serving(body: Body): # 👈 파라미터로 Pydantic 모델을 받습니다.
     result = router.handle_request(body.user_id, body.session_id, body.human)
 
     return result
-
