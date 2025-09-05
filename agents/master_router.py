@@ -7,6 +7,7 @@ from apps.setup import logger
 
 from .shb import qna_chatbot
 from .shs.cs_agnet_langchain import CustomerSupportAnalyzerAgent
+from .shp.shop_api import get_order_contact_info
 
 
 
@@ -93,6 +94,16 @@ class MasterRouter:
                 print(f"💬 USER: {param}")
                 response = qna_chatbot.answer(param)
                 print(f"🤖 AI: {response}")
+
+            elif intent == 'SHOP':
+                result = get_order_contact_info("user-abc-123")
+                response = result.contact_urls[0]
+                
+
+
+                #                response = response + "\n\n  * 관련 문의는 고객센터 게시판에 전달되었으며, 추후 상담원을 통해 상세한 추가 답변 드리겠습니다."
+                print(f"🤖 AI: {response}")
+                
 
 
             elif intent == 'CS':
